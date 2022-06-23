@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-06-23T13:37:51 IST" name="Default suite" finished-at="2022-06-23T13:40:00 IST" duration-ms="129600">
+    <groups>
+    </groups>
+    <test started-at="2022-06-23T13:37:51 IST" name="Default test" finished-at="2022-06-23T13:40:00 IST" duration-ms="129600">
+      <class name="MockNativeSystem.example">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:MockNativeSystem.example@1aa7ecca]" started-at="2022-06-23T13:37:51 IST" name="BeforeTest" finished-at="2022-06-23T13:38:52 IST" duration-ms="61220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTest -->
+        <test-method signature="Ruby()[pri:0, instance:MockNativeSystem.example@1aa7ecca]" started-at="2022-06-23T13:38:52 IST" name="Ruby" finished-at="2022-06-23T13:40:00 IST" duration-ms="68326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Ruby -->
+      </class> <!-- MockNativeSystem.example -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
