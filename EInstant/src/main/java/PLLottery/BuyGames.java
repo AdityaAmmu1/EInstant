@@ -62,7 +62,7 @@ public class BuyGames{
 			driver.findElement(By.xpath("//*[@id=\"password-dropdown-login\"]")).sendKeys("Welcome1");
 			System.out.println("login button");
 			Screen screen1 = new Screen();
-			Pattern submit = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\submit.png");
+			Pattern submit = new Pattern("Rgsimages\\PolandGames\\submit.png");
 			  screen1.wait(submit,40000);
 			  screen1.click(submit);
 			Thread.sleep(10000);
@@ -76,7 +76,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\diamond\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\diamond\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[7]/img")).click();
@@ -85,35 +85,35 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,500)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\diamond\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\diamond\\demo2.png");
 			  screen.wait(demo,5000); 
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\diamond\\volume3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\diamond\\volume3.png");
 			  screen.wait(volume,40000);
 			  screen.click(volume);
 			  
-			  Pattern ok = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\diamond\\ok4.png");
+			  Pattern ok = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\diamond\\ok4.png");
 			  screen.wait(ok,5000);
 			  screen.click(ok);
 			  
-			  Pattern switch8 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\diamond\\switch8.png");
+			  Pattern switch8 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\diamond\\switch8.png");
 			  screen.wait(switch8,5000);
 			  screen.click(switch8);
 			  
-			  Pattern realPlay = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\diamond\\realPlay6.png");
+			  Pattern realPlay = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\diamond\\realPlay6.png");
 			  screen.wait(realPlay,40000);
 			  screen.click(realPlay);
 			  
-			  Pattern auto = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\diamond\\auto7.png");
+			  Pattern auto = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\diamond\\auto7.png");
 			  screen.wait(auto,40000);
 			  screen.click(auto);
 			  Thread.sleep(10000);
 			  
-			  Pattern realPlay1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\diamond\\realPlay7.png");
+			  Pattern realPlay1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\diamond\\realPlay7.png");
 			  screen.wait(realPlay1,40000);
 			  
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\diamond\\home8.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\diamond\\home8.png");
 			  screen.wait(home,40000);
 			  screen.click(home);
 	  }
@@ -124,7 +124,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[12]/img")).click();
@@ -133,48 +133,48 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\sound3.png");
 			  screen.wait(volume,5000);
 			  Thread.sleep(2000);
 			  screen.click(volume);
 			  
-			  Pattern ok = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\ok4.png");
+			  Pattern ok = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\ok4.png");
 			  screen.wait(ok,5000);
 			  screen.click(ok);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\ok4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\ok4.png");
 			  screen.wait(ok,5000);
 			  screen.click(ok1);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\place7.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  Thread.sleep(3000);
 			  
-			  Pattern auto = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\auto8.png");
+			  Pattern auto = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\auto8.png");
 			  screen.wait(auto,40000);
 			  screen.click(auto);
 			  Thread.sleep(3000);
 			  
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\place9.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\place9.png");
 			  screen.wait(play2,5000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Egypt\\home10.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Egypt\\home10.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 	  }
@@ -186,7 +186,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[5]/img")).click();
@@ -195,42 +195,42 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\demo2.png");
 			  screen.wait(demo,40000); 
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\sound3.png");
 			  screen.wait(volume,5000);
 			  Thread.sleep(2000);
 			  screen.click(volume);
 			  
-			  Pattern ok = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\ok4.png");
+			  Pattern ok = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\ok4.png");
 			  screen.wait(ok,5000);
 			  screen.click(ok);
 			  
-			  Pattern demo1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\switch5.png");
+			  Pattern demo1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\switch5.png");
 			  screen.wait(demo1,5000);
 			  screen.click(demo1);
 			  Thread.sleep(7000);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\place7.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  
-			  Pattern auto3 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\auto8.png");
+			  Pattern auto3 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\auto8.png");
 			  screen.wait(auto3,5000);
 			  screen.click(auto3);
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\place9.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\place9.png");
 			  screen.wait(play2,5000);
 			  Thread.sleep(15000);
 			  
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\goldRush\\home8.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\goldRush\\home8.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 	  }
@@ -241,7 +241,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\5card\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\5card\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[8]/img")).click();
@@ -250,45 +250,45 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\5card\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\5card\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\5card\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\5card\\sound3.png");
 			  screen.wait(volume,5000);
 			  Thread.sleep(2000);
 			  screen.click(volume);
 			  
-			  Pattern ok = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\5card\\ok4.png");
+			  Pattern ok = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\5card\\ok4.png");
 			  screen.wait(ok,5000);
 			  screen.click(ok);
 			  
-			  Pattern demo1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\5card\\switch5.png");
+			  Pattern demo1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\5card\\switch5.png");
 			  screen.wait(demo1,5000);
 			  screen.click(demo1);
 			  Thread.sleep(7000);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\5card\\ok4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\5card\\ok4.png");
 			  screen.wait(ok1,5000);
 			  screen.click(ok1);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\5card\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\5card\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\5card\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\5card\\place7.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  
-			  Pattern auto3 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\5card\\auto8.png");
+			  Pattern auto3 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\5card\\auto8.png");
 			  screen.wait(auto3,5000);
 			  screen.click(auto3);
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\5card\\place9.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\5card\\place9.png");
 			  screen.wait(play2,5000);
 			  
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\5card\\home10.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\5card\\home10.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 	  }
@@ -299,7 +299,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[9]/img")).click();
@@ -308,42 +308,42 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\sound3.png");
 			  screen.wait(volume,5000);
 			  Thread.sleep(2000);
 			  screen.click(volume);
 			  
-			  Pattern ok = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\ok4.png");
+			  Pattern ok = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\ok4.png");
 			  screen.wait(ok,5000);
 			  screen.click(ok);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\place7.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  Thread.sleep(3000);
 			  
-			  Pattern auto3 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\auto8.png");
+			  Pattern auto3 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\auto8.png");
 			  screen.wait(auto3,5000);
 			  screen.click(auto3);
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\place9.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\place9.png");
 			  screen.wait(play2,5000);
 			  
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Christmas balls\\home10.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Christmas balls\\home10.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 	  }
@@ -355,7 +355,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[10]/img")).click();
@@ -364,52 +364,52 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\sound3.png");
 			  screen.wait(volume,5000);
 			  Thread.sleep(2000);
 			  screen.click(volume);
 			  
-			  Pattern ok = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\ok4.png");
+			  Pattern ok = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\ok4.png");
 			  screen.wait(ok,5000);
 			  screen.click(ok);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\ok4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\ok4.png");
 			  screen.wait(ok1,5000);
 			  screen.click(ok1);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\place7.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  Thread.sleep(3000);
 			  
-			  Pattern play1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\place8.png");
+			  Pattern play1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\place8.png");
 			  screen.wait(play1,40000);
 			  screen.click(play1);
 			  Thread.sleep(3000);
 			  
-			  Pattern start = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\start9.png");
+			  Pattern start = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\start9.png");
 			  screen.wait(start,40000);
 			  screen.click(start);
 			  Thread.sleep(3000);
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\place10.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\place10.png");
 			  screen.wait(play2,5000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Cyferki\\home11.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Cyferki\\home11.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 	  }
@@ -420,7 +420,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Antyki\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Antyki\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[11]/img")).click();
@@ -429,40 +429,40 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Antyki\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Antyki\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Antyki\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Antyki\\sound3.png");
 			  screen.wait(volume,5000);
 			  Thread.sleep(2000);
 			  screen.click(volume);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Antyki\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Antyki\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Antyki\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Antyki\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Antyki\\place8.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Antyki\\place8.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  Thread.sleep(3000);
 			  
-			  Pattern auto = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Antyki\\auto9.png");
+			  Pattern auto = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Antyki\\auto9.png");
 			  screen.wait(auto,40000);
 			  screen.click(auto);
 			  Thread.sleep(3000);
 			  
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Antyki\\place10.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Antyki\\place10.png");
 			  screen.wait(play2,5000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Antyki\\home11.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Antyki\\home11.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 	  }
@@ -473,7 +473,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[15]/img")).click();
@@ -482,45 +482,45 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\sound3.png");
 			  screen.wait(volume,5000);
 			  Thread.sleep(2000);
 			  screen.click(volume);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\ok4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\ok4.png");
 			  screen.wait(ok1,5000);
 			  Thread.sleep(2000);
 			  screen.click(ok1);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\play7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\play7.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  Thread.sleep(3000);
 			  
-			  Pattern auto = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\auto8.png");
+			  Pattern auto = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\auto8.png");
 			  screen.wait(auto,40000);
 			  screen.click(auto);
 			  Thread.sleep(3000);
 			  
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\play9.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\play9.png");
 			  screen.wait(play2,5000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\home10.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\TriplePlatinum\\home10.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 			  }
@@ -531,7 +531,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[13]/img")).click();
@@ -540,43 +540,43 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\sound3.png");
 			  screen.wait(volume,5000);
 			  Thread.sleep(2000);
 			  screen.click(volume);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\ok4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\ok4.png");
 			  screen.wait(ok1,5000);
 			  Thread.sleep(2000);
 			  screen.click(ok1);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\place7.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  Thread.sleep(3000);
 			  
-			  Pattern auto = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\auto8.png");
+			  Pattern auto = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\auto8.png");
 			  screen.wait(auto,40000);
 			  screen.click(auto);
 			  		  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\place9.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\place9.png");
 			  screen.wait(play2,5000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\Duszki\\home10.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\Duszki\\home10.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 			  }
@@ -587,7 +587,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[14]/img")).click();
@@ -596,47 +596,47 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\sound3.png");
 			  screen.wait(volume,5000);
 			  Thread.sleep(2000);
 			  screen.click(volume);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\start4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\start4.png");
 			  screen.wait(ok1,5000);
 			  Thread.sleep(2000);
 			  screen.click(ok1);
 			  
-			  Pattern setting = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\setting5.png");
+			  Pattern setting = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\setting5.png");
 			  screen.wait(setting,40000);
 			  screen.click(setting);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\switch6.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\switch6.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\reduce7.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\reduce7.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\place8.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\place8.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  Thread.sleep(3000);
 			  
-			  Pattern auto = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\auto9.png");
+			  Pattern auto = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\auto9.png");
 			  screen.wait(auto,40000);
 			  screen.click(auto);
 			  		  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\place10.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\place10.png");
 			  screen.wait(play2,5000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\home11.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\home11.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 			  }
@@ -647,7 +647,7 @@ public class BuyGames{
 			  Thread.sleep(5000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[16]/img")).click();
@@ -656,43 +656,43 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\sound3.png");
 			  screen.wait(volume,5000);
 			  screen.click(volume);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\ok4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\ok4.png");
 			  screen.wait(ok1,5000);
 			  Thread.sleep(2000);
 			  screen.click(ok1);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern ok2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\ok4.png");
+			  Pattern ok2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\ok4.png");
 			  screen.wait(ok2,5000);
 			  screen.click(ok2);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\place7.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  Thread.sleep(3000);
 			  		  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\place8.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\place8.png");
 			  screen.wait(play2,5000);
 			  Thread.sleep(15000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\btyskothi\\home9.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\btyskothi\\home9.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 			  }
@@ -706,7 +706,7 @@ public class BuyGames{
 			  js.executeScript("window.scrollBy(0,200)", "");
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[20]/img")).click();
@@ -714,43 +714,43 @@ public class BuyGames{
 			  Thread.sleep(15000);
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\sound3.png");
 			  screen.wait(volume,5000);
 			  screen.click(volume);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\ok4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\ok4.png");
 			  screen.wait(ok1,5000);
 			  Thread.sleep(2000);
 			  screen.click(ok1);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\place7.png");
 			  screen.wait(play,40000);
 			  screen.click(play);
 			  Thread.sleep(3000);
 			  		  
-			  Pattern auto = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\auto8.png");
+			  Pattern auto = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\auto8.png");
 			  screen.wait(auto,5000);
 			  screen.click(auto);
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\place9.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\place9.png");
 			  screen.wait(play2,5000);
 			  Thread.sleep(15000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\home10.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\hotPepperPayout\\home10.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 			  }
@@ -765,7 +765,7 @@ public class BuyGames{
 			  js.executeScript("window.scrollBy(0,200)", "");
 			  Thread.sleep(2000);
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[17]/img")).click();
@@ -773,50 +773,50 @@ public class BuyGames{
 			  Thread.sleep(15000);
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\sound3.png");
 			  screen.wait(volume,5000);
 			  screen.click(volume);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\ok4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\ok4.png");
 			  screen.wait(ok1,5000);
 			  Thread.sleep(2000);
 			  screen.click(ok1);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\place7.png");
 			  screen.wait(play,5000);
 			  screen.click(play);
 			  
-			  Pattern option = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\option8.png");
+			  Pattern option = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\option8.png");
 			  screen.wait(option,5000);
 			  screen.click(option);
 			  
-			  Pattern ok = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\ok9.png");
+			  Pattern ok = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\ok9.png");
 			  screen.wait(ok,5000);
 			  screen.click(ok);
 			  		  
-			  Pattern auto = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\auto10.png");
+			  Pattern auto = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\auto10.png");
 			  screen.wait(auto,5000);
 			  screen.click(auto);
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\place11.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\place11.png");
 			  screen.wait(play2,5000);
 			  Thread.sleep(3000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\gorki\\home12.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\gorki\\home12.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 			  }
@@ -831,7 +831,7 @@ public class BuyGames{
 			  Thread.sleep(2000);
 			  
 			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\image1.png");
+//			  Pattern diamond = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\image1.png");
 //			  screen.wait(diamond,40000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[18]/img")).click();
@@ -839,42 +839,42 @@ public class BuyGames{
 			  Thread.sleep(15000);
 			  js.executeScript("window.scrollBy(0,600)", "");
 			  
-			  Pattern demo = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\demo2.png");
+			  Pattern demo = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\demo2.png");
 			  screen.wait(demo,40000);
 			  screen.click(demo);
 			  
-			  Pattern volume = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\sound3.png");
+			  Pattern volume = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\sound3.png");
 			  screen.wait(volume,5000);
 			  screen.click(volume);
 			  
-			  Pattern ok1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\ok4.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\ok4.png");
 			  screen.wait(ok1,5000);
 			  Thread.sleep(2000);
 			  screen.click(ok1);
 			  
-			  Pattern switch1 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\switch5.png");
+			  Pattern switch1 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\switch5.png");
 			  screen.wait(switch1,5000);
 			  screen.click(switch1);
 			  Thread.sleep(3000);
 			  
-			  Pattern reduce = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\reduce6.png");
+			  Pattern reduce = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\reduce6.png");
 			  screen.wait(reduce,5000);
 			  screen.click(reduce);
 			  Thread.sleep(3000);
 			  
-			  Pattern play = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\place7.png");
+			  Pattern play = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\place7.png");
 			  screen.wait(play,5000);
 			  screen.click(play);
 			  		  
-			  Pattern auto = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\auto8.png");
+			  Pattern auto = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\auto8.png");
 			  screen.wait(auto,40000);
 			  screen.click(auto);
 			  
-			  Pattern play2 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\place9.png");
+			  Pattern play2 = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\place9.png");
 			  screen.wait(play2,5000);
 			  Thread.sleep(3000);
 
-			  Pattern home = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\PolandGames\\zbuyGmaes\\emotki\\home10.png");
+			  Pattern home = new Pattern("Rgsimages\\PolandGames\\zbuyGmaes\\emotki\\home10.png");
 			  screen.wait(home,5000);
 			  screen.click(home);
 			  }
@@ -887,34 +887,34 @@ public class BuyGames{
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s3 = new Screen();
-			  Pattern frontpage = new Pattern("E:\\eclipse\\projects\\Polandlottery\\monetki-fp.png");
+			  Pattern frontpage = new Pattern("Rgsimages\\Polandlottery\\monetki-fp.png");
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
 			  Thread.sleep(2000);
 		js.executeScript("window. scrollBy(500,500)");
-		Pattern demo3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\monetki-demo.png");
+		Pattern demo3 = new Pattern("Rgsimages\\Polandlottery\\monetki-demo.png");
 			  s3.wait(demo3,10000);
 			  s3.click(demo3);
-			  Pattern audio3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\monetki-audio.png");
+			  Pattern audio3 = new Pattern("Rgsimages\\Polandlottery\\monetki-audio.png");
 			  s3.wait(audio3,10000);
 			  s3.doubleClick(audio3);
-			  Pattern ok3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\monetki-ok.png");
+			  Pattern ok3 = new Pattern("Rgsimages\\Polandlottery\\monetki-ok.png");
 			  s3.wait(ok3,10000);
 			  s3.click(ok3);
-			  Pattern increase3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\monetki-increase.png");
+			  Pattern increase3 = new Pattern("Rgsimages\\Polandlottery\\monetki-increase.png");
 			  s3.wait(increase3 ,10000);
 			  s3.click(increase3);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\monetki-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\monetki-mtm.png");
 			  s3.wait(mtm,10000);
 			  s3.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\monetki-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\monetki-buy.png");
 			  s3.wait(buy,10000);
 			  s3.click(buy);
-			  Pattern ra3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\monetki-autobtn.png");
+			  Pattern ra3 = new Pattern("Rgsimages\\Polandlottery\\monetki-autobtn.png");
 			  s3.wait(ra3,10000);
 			  s3.doubleClick(ra3);
 			  Thread.sleep(5000);
-			  Pattern home3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home3 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s3.wait(home3,10000);
 			  s3.click(home3);
 }
@@ -927,33 +927,33 @@ public class BuyGames{
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s3 = new Screen();
-			  Pattern frontpage = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Gp-frontpage.png");
+			  Pattern frontpage = new Pattern("Rgsimages\\Polandlottery\\Gp-frontpage.png");
 			  s3.wait(frontpage,1000);
 			  s3.click(frontpage);
 		js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
-			  Pattern demo3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\gp-demo.png");
+			  Pattern demo3 = new Pattern("Rgsimages\\Polandlottery\\gp-demo.png");
 			  s3.wait(demo3,1000);
 			  s3.click(demo3);
-			  Pattern audio3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\gp-audio.png");
+			  Pattern audio3 = new Pattern("Rgsimages\\Polandlottery\\gp-audio.png");
 			  s3.wait(audio3,1000);
 			  s3.doubleClick(audio3);
-			  Pattern ok3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\gp-ok.png");
+			  Pattern ok3 = new Pattern("Rgsimages\\Polandlottery\\gp-ok.png");
 			  s3.wait(ok3,1000);
 			  s3.click(ok3);
-			  Pattern increase3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\gp-increase.png");
+			  Pattern increase3 = new Pattern("Rgsimages\\Polandlottery\\gp-increase.png");
 			  s3.wait(increase3 ,1000);
 			  s3.click(increase3);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\gp-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\gp-mtm.png");
 			  s3.wait(mtm,1000);
 			  s3.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\gp-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\gp-buy.png");
 			  s3.wait(buy,1000);
 			  s3.click(buy);
-			  Pattern ra3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\gp-buy-auto.png");
+			  Pattern ra3 = new Pattern("Rgsimages\\Polandlottery\\gp-buy-auto.png");
 			  s3.wait(ra3,1000);
 			  s3.doubleClick(ra3);
-			  Pattern home3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home3 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s3.wait(home3,1000);
 			  s3.click(home3);
 	   }
@@ -966,33 +966,33 @@ public class BuyGames{
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s3 = new Screen();
-			  Pattern frontpage = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Gwiazdki-fp.png");
+			  Pattern frontpage = new Pattern("Rgsimages\\Polandlottery\\Gwiazdki-fp.png");
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
 		js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
-			  Pattern demo3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Gwiazdki-demo.png");
+			  Pattern demo3 = new Pattern("Rgsimages\\Polandlottery\\Gwiazdki-demo.png");
 			  s3.wait(demo3,10000);
 			  s3.click(demo3);
-			  Pattern audio3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Gwiazdki-audio.png");
+			  Pattern audio3 = new Pattern("Rgsimages\\Polandlottery\\Gwiazdki-audio.png");
 			  s3.wait(audio3,10000);
 			  s3.doubleClick(audio3);
-			  Pattern ok3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Gwiazdki-ok.png");
+			  Pattern ok3 = new Pattern("Rgsimages\\Polandlottery\\Gwiazdki-ok.png");
 			  s3.wait(ok3,10000);
 			  s3.click(ok3);
-			  Pattern increase3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Gwiazdki-increase.png");
+			  Pattern increase3 = new Pattern("Rgsimages\\Polandlottery\\Gwiazdki-increase.png");
 			  s3.wait(increase3 ,10000);
 			  s3.click(increase3);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Gwiazdki-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\Gwiazdki-mtm.png");
 			  s3.wait(mtm,10000);
 			  s3.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Gwiazdki-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\Gwiazdki-buy.png");
 			  s3.wait(buy,1000);
 			  s3.click(buy);
-			  Pattern ra3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Gwiazdki-autobtn.png");
+			  Pattern ra3 = new Pattern("Rgsimages\\Polandlottery\\Gwiazdki-autobtn.png");
 			  s3.wait(ra3,10000);
 			  s3.doubleClick(ra3);
-			  Pattern home3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home3 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s3.wait(home3,10000);
 			  s3.click(home3);
 			 
@@ -1006,33 +1006,33 @@ public class BuyGames{
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s2 = new Screen();
-			  Pattern fp = new Pattern("E:\\eclipse\\projects\\Polandlottery\\kamyki-fp.png");
+			  Pattern fp = new Pattern("Rgsimages\\Polandlottery\\kamyki-fp.png");
 			  s2.wait(fp,1000);
 			  s2.click(fp);
 			  Thread.sleep(5000);
 			  js.executeScript("window. scrollBy(0,600)");
-			  Pattern demo2 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\kamyki-demo.png");
+			  Pattern demo2 = new Pattern("Rgsimages\\Polandlottery\\kamyki-demo.png");
 			  s2.wait(demo2,1000);
 			  s2.click(demo2);
-			  Pattern audio2 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\kamyki-audio.png");
+			  Pattern audio2 = new Pattern("Rgsimages\\Polandlottery\\kamyki-audio.png");
 			  s2.wait(audio2,1000);
 			  s2.doubleClick(audio2);
-			  Pattern ok2 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\kamyki-ok.png");
+			  Pattern ok2 = new Pattern("Rgsimages\\Polandlottery\\kamyki-ok.png");
 			  s2.wait(ok2,1000);
 			  s2.click(ok2);
-			  Pattern increase2 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\kamyki-increase.png");
+			  Pattern increase2 = new Pattern("Rgsimages\\Polandlottery\\kamyki-increase.png");
 			  s2.wait(increase2 ,1000);
 			  s2.click(increase2);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\kamyki-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\kamyki-mtm.png");
 			  s2.wait(mtm,1000);
 			  s2.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\kamyki-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\kamyki-buy.png");
 			  s2.wait(buy,1000);
 			  s2.click(buy);
-			  Pattern ra2 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\kamyki-demoauto.png");
+			  Pattern ra2 = new Pattern("Rgsimages\\Polandlottery\\kamyki-demoauto.png");
 			  s2.wait(ra2,1000);
 			  s2.doubleClick(ra2);
-			  Pattern home2 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home2 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s2.wait(home2,1000);
 			  s2.click(home2);
 		 
@@ -1047,35 +1047,35 @@ public class BuyGames{
 			 
 			  Screen s3 = new Screen();
 			  js.executeScript("window. scrollBy(500,500)");
-			  Pattern frontpage = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Kurki-fp.png");
+			  Pattern frontpage = new Pattern("Rgsimages\\Polandlottery\\Kurki-fp.png");
 			  s3.wait(frontpage,1000);
 			  s3.click(frontpage,1000);
 			
 			   Thread.sleep(5000);
 			   js.executeScript("window. scrollBy(0,600)");
-			  Pattern demo3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Kurki-demo.png");
+			  Pattern demo3 = new Pattern("Rgsimages\\Polandlottery\\Kurki-demo.png");
 			  s3.wait(demo3,1000);
 			  s3.click(demo3);
-			  Pattern audio3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Kurki-audio.png");
+			  Pattern audio3 = new Pattern("Rgsimages\\Polandlottery\\Kurki-audio.png");
 			  s3.wait(audio3,1000);
 			  s3.doubleClick(audio3);
-			  Pattern ok3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Kurki-ok.png");
+			  Pattern ok3 = new Pattern("Rgsimages\\Polandlottery\\Kurki-ok.png");
 			  s3.wait(ok3,1000);
 			  s3.click(ok3);
-			  Pattern increase3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Kurki-increase.png");
+			  Pattern increase3 = new Pattern("Rgsimages\\Polandlottery\\Kurki-increase.png");
 			  s3.wait(increase3 ,1000);
 			  s3.click(increase3);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Kurki-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\Kurki-mtm.png");
 			  s3.wait(mtm,1000);
 			  s3.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Kurki-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\Kurki-buy.png");
 			  s3.wait(buy,1000);
 			  s3.click(buy);
-			  Pattern ra3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Kurki-autobtn.png");
+			  Pattern ra3 = new Pattern("Rgsimages\\Polandlottery\\Kurki-autobtn.png");
 			  s3.wait(ra3,1000);
 			  s3.doubleClick(ra3);
 			  Thread.sleep(5000);
-			  Pattern home3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home3 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s3.wait(home3,1000);
 			  s3.click(home3);
 			 
@@ -1091,33 +1091,33 @@ public class BuyGames{
 			  Screen s = new Screen();
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,5000)");
-			  Pattern fp = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-fp.png");
+			  Pattern fp = new Pattern("Rgsimages\\Polandlottery\\Tot-fp.png");
 			  s.wait(fp,30000);
 			  s.click(fp);
 			  Thread.sleep(5000);
 			  js.executeScript("window. scrollBy(0,600)");
-			  Pattern demo = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-demo.png");
+			  Pattern demo = new Pattern("Rgsimages\\Polandlottery\\Tot-demo.png");
 			  		  s.wait(demo,1000);
 			  s.click(demo);
-			  Pattern audio = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-Audio.png");
+			  Pattern audio = new Pattern("Rgsimages\\Polandlottery\\Tot-try-Audio.png");
 			  s.wait(audio,1000);
 			  s.click(audio);
-			  Pattern ok = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-ok.png");
+			  Pattern ok = new Pattern("Rgsimages\\Polandlottery\\Tot-ok.png");
 			  s.wait(ok,1000);
 			  s.click(ok);
-			  Pattern increase = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-increase.png");
+			  Pattern increase = new Pattern("Rgsimages\\Polandlottery\\Tot-increase.png");
 			  s.wait(increase ,1000);
 			  s.click(increase);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\tot-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\tot-mtm.png");
 			  s.wait(mtm,1000);
 			  s.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\tot-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\tot-buy.png");
 			  s.wait(buy,1000);
 			  s.click(buy);
-			  Pattern ra = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-revealall.png");
+			  Pattern ra = new Pattern("Rgsimages\\Polandlottery\\Tot-try-revealall.png");
 			  s.wait(ra,5000);
 			  s.click(ra);
-			  Pattern home = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s.wait(home,5000);
 			  s.click(home);
 	 }
@@ -1130,34 +1130,34 @@ public class BuyGames{
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  Screen s1 = new Screen();
 			  js.executeScript("window. scrollBy(500,500)");
-			  Pattern fp = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Skrzynki-fp.png");
+			  Pattern fp = new Pattern("Rgsimages\\Polandlottery\\Skrzynki-fp.png");
 			  s1.wait(fp,30000);
 			  s1.click(fp);
 			  Thread.sleep(5000);
 			 js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
-			  Pattern demo1 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Skrzynki-demo.png");
+			  Pattern demo1 = new Pattern("Rgsimages\\Polandlottery\\Skrzynki-demo.png");
 			  s1.wait(demo1,1000);
 			  s1.click(demo1);
-			  Pattern audio1 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Skrzynki-audio.png");
+			  Pattern audio1 = new Pattern("Rgsimages\\Polandlottery\\Skrzynki-audio.png");
 			  s1.wait(audio1,1000);
 			  s1.doubleClick(audio1);
-			  Pattern ok1 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Skrzynki-ok.png");
+			  Pattern ok1 = new Pattern("Rgsimages\\Polandlottery\\Skrzynki-ok.png");
 			  s1.wait(ok1,1000);
 			  s1.click(ok1);
-			  Pattern increase1 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Skrzynki-increase.png");
+			  Pattern increase1 = new Pattern("Rgsimages\\Polandlottery\\Skrzynki-increase.png");
 			  s1.wait(increase1 ,1000);
 			  s1.click(increase1);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\skrzunki-movetomoney.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\skrzunki-movetomoney.png");
 			  s1.wait(mtm,1000);
 			  s1.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\skrzynki-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\skrzynki-buy.png");
 			  s1.wait(buy,1000);
 			  s1.click(buy);
-			  Pattern ra1 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Skrzynki-autoreveal.png");
+			  Pattern ra1 = new Pattern("Rgsimages\\Polandlottery\\Skrzynki-autoreveal.png");
 			  s1.wait(ra1,1000);
 			  s1.doubleClick(ra1);
-			  Pattern home1 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home1 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s1.wait(home1,1000);
 			  s1.click(home1);
 		 }
@@ -1170,33 +1170,33 @@ public class BuyGames{
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s3 = new Screen();
-			  Pattern frontpage = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Owocki-fp.png");
+			  Pattern frontpage = new Pattern("Rgsimages\\Polandlottery\\Owocki-fp.png");
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
 		js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
-			  Pattern demo3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Owocki-demo.png");
+			  Pattern demo3 = new Pattern("Rgsimages\\Polandlottery\\Owocki-demo.png");
 			  s3.wait(demo3,10000);
 			  s3.click(demo3);
-			  Pattern audio3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Owocki-audio.png");
+			  Pattern audio3 = new Pattern("Rgsimages\\Polandlottery\\Owocki-audio.png");
 			  s3.wait(audio3,10000);
 			  s3.doubleClick(audio3);
-			  Pattern ok3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Owocki-ok.png");
+			  Pattern ok3 = new Pattern("Rgsimages\\Polandlottery\\Owocki-ok.png");
 			  s3.wait(ok3,10000);
 			  s3.click(ok3);
-			  Pattern increase3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Owocki-increase.png");
+			  Pattern increase3 = new Pattern("Rgsimages\\Polandlottery\\Owocki-increase.png");
 			  s3.wait(increase3 ,10000);
 			  s3.click(increase3);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Owocki-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\Owocki-mtm.png");
 			  s3.wait(mtm,1000);
 			  s3.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Owocki-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\Owocki-buy.png");
 			  s3.wait(buy,1000);
 			  s3.click(buy);
-			  Pattern ra3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Owocki-autobtn.png");
+			  Pattern ra3 = new Pattern("Rgsimages\\Polandlottery\\Owocki-autobtn.png");
 			  s3.wait(ra3,10000);
 			  s3.doubleClick(ra3);
-			  Pattern home3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home3 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s3.wait(home3,10000);
 			  s3.click(home3);
 			 
@@ -1210,33 +1210,33 @@ public class BuyGames{
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s3 = new Screen();
-			  Pattern frontpage = new Pattern("E:\\eclipse\\projects\\Polandlottery\\krzyowki-fp.png");
+			  Pattern frontpage = new Pattern("Rgsimages\\Polandlottery\\krzyowki-fp.png");
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
 		js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
-			  Pattern demo3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\krzyowki-demo.png");
+			  Pattern demo3 = new Pattern("Rgsimages\\Polandlottery\\krzyowki-demo.png");
 			  s3.wait(demo3,10000);
 			  s3.click(demo3);
-			  Pattern audio3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\krzyowki-audio.png");
+			  Pattern audio3 = new Pattern("Rgsimages\\Polandlottery\\krzyowki-audio.png");
 			  s3.wait(audio3,10000);
 			  s3.doubleClick(audio3);
-			  Pattern ok3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\krzyowki-ok.png");
+			  Pattern ok3 = new Pattern("Rgsimages\\Polandlottery\\krzyowki-ok.png");
 			  s3.wait(ok3,10000);
 			  s3.click(ok3);
-			  Pattern increase3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\krzyowki-increase.png");
+			  Pattern increase3 = new Pattern("Rgsimages\\Polandlottery\\krzyowki-increase.png");
 			  s3.wait(increase3 ,10000);
 			  s3.click(increase3);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\krzyowki-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\krzyowki-mtm.png");
 			  s3.wait(mtm,1000);
 			  s3.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\krzyowki-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\krzyowki-buy.png");
 			  s3.wait(buy,1000);
 			  s3.click(buy);
-			  Pattern ra3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\krzyowki-autobtn.png");
+			  Pattern ra3 = new Pattern("Rgsimages\\Polandlottery\\krzyowki-autobtn.png");
 			  s3.wait(ra3,10000);
 			  s3.doubleClick(ra3);
-			  Pattern home3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home3 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s3.wait(home3,10000);
 			  s3.click(home3);
 			 
@@ -1250,33 +1250,33 @@ public class BuyGames{
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s3 = new Screen();
-			  Pattern frontpage = new Pattern("E:\\eclipse\\projects\\Polandlottery\\znaczki-fp.png");
+			  Pattern frontpage = new Pattern("Rgsimages\\Polandlottery\\znaczki-fp.png");
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
 		js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
-			  Pattern demo3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Znaczki-demo.png");
+			  Pattern demo3 = new Pattern("Rgsimages\\Polandlottery\\Znaczki-demo.png");
 			  s3.wait(demo3,10000);
 			  s3.click(demo3);
-			  Pattern audio3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Znaczki-audio.png");
+			  Pattern audio3 = new Pattern("Rgsimages\\Polandlottery\\Znaczki-audio.png");
 			  s3.wait(audio3,10000);
 			  s3.doubleClick(audio3);
-			  Pattern ok3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Znaczki-ok.png");
+			  Pattern ok3 = new Pattern("Rgsimages\\Polandlottery\\Znaczki-ok.png");
 			  s3.wait(ok3,10000);
 			  s3.click(ok3);
-			  Pattern increase3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Znaczki-increase.png");
+			  Pattern increase3 = new Pattern("Rgsimages\\Polandlottery\\Znaczki-increase.png");
 			  s3.wait(increase3 ,10000);
 			  s3.click(increase3);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\znaczki-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\znaczki-mtm.png");
 			  s3.wait(mtm,1000);
 			  s3.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\znaczki-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\znaczki-buy.png");
 			  s3.wait(buy,1000);
 			  s3.click(buy);
-			  Pattern ra3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Znaczki-auto.png");
+			  Pattern ra3 = new Pattern("Rgsimages\\Polandlottery\\Znaczki-auto.png");
 			  s3.wait(ra3,10000);
 			  s3.doubleClick(ra3);
-			  Pattern home3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home3 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s3.wait(home3,10000);
 			  s3.click(home3);
 			 
@@ -1292,33 +1292,33 @@ public class BuyGames{
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s3 = new Screen();
-			  Pattern fp = new Pattern("E:\\eclipse\\projects\\Polandlottery\\siodemki-fp.png");
+			  Pattern fp = new Pattern("Rgsimages\\Polandlottery\\siodemki-fp.png");
 			  s3.wait(fp,1000);
 			  s3.click(fp);
 			   Thread.sleep(5000);
 			   js.executeScript("window. scrollBy(0,600)");
-			  Pattern demo3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Siodemki-demo.png");
+			  Pattern demo3 = new Pattern("Rgsimages\\Polandlottery\\Siodemki-demo.png");
 			  s3.wait(demo3,1000);
 			  s3.click(demo3);
-			  Pattern audio3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Siodemki-Audio.png");
+			  Pattern audio3 = new Pattern("Rgsimages\\Polandlottery\\Siodemki-Audio.png");
 			  s3.wait(audio3,1000);
 			  s3.doubleClick(audio3);
-			  Pattern ok3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Siodemki-ok.png");
+			  Pattern ok3 = new Pattern("Rgsimages\\Polandlottery\\Siodemki-ok.png");
 			  s3.wait(ok3,1000);
 			  s3.click(ok3);
-			  Pattern increase3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Siodemki-increase.png");
+			  Pattern increase3 = new Pattern("Rgsimages\\Polandlottery\\Siodemki-increase.png");
 			  s3.wait(increase3 ,1000);
 			  s3.click(increase3);
-			  Pattern mtm = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Siodemki-mtm.png");
+			  Pattern mtm = new Pattern("Rgsimages\\Polandlottery\\Siodemki-mtm.png");
 			  s3.wait(mtm,1000);
 			  s3.click(mtm);
-			  Pattern buy = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Siodemki-buy.png");
+			  Pattern buy = new Pattern("Rgsimages\\Polandlottery\\Siodemki-buy.png");
 			  s3.wait(buy,1000);
 			  s3.click(buy);
-			  Pattern ra3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Siodemki-autobtn.png");
+			  Pattern ra3 = new Pattern("Rgsimages\\Polandlottery\\Siodemki-autobtn.png");
 			  s3.wait(ra3,1000);
 			  s3.doubleClick(ra3);
-			  Pattern home3 = new Pattern("E:\\eclipse\\projects\\Polandlottery\\Tot-try-home.png");
+			  Pattern home3 = new Pattern("Rgsimages\\Polandlottery\\Tot-try-home.png");
 			  s3.wait(home3,1000);
 			  s3.click(home3);
 			 
