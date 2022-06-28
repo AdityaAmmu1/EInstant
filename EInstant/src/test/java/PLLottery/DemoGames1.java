@@ -18,7 +18,7 @@ import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 import org.testng.annotations.AfterMethod;
 
-public class DemoGames {
+public class DemoGames1 {
 	public static WebDriver driver;
 	@BeforeMethod
 	@Parameters("browser")

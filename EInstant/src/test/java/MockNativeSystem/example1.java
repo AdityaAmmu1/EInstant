@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class example{
+public class example1{
 	static WebDriver driver;
 	@org.testng.annotations.BeforeTest
 	public void BeforeTest() throws InterruptedException{
@@ -73,20 +73,20 @@ public class example{
 		    }
 		    driver.manage().window().maximize();
 		Screen screen = new Screen();
-	   	Pattern sound = new Pattern("C:\\Users\\pdf57170\\git\\EInstant\\EInstant\\Rgsimages\\MNS\\ruby\\sound1.png");
+	   	Pattern sound = new Pattern("Rgsimages\\MNS\\ruby\\sound1.png");
 	   	screen.wait(sound,40000);
 	   	screen.click(sound);
 	   	
-	   	Pattern buy = new Pattern("C:\\Users\\pdf57170\\git\\EInstant\\EInstant\\Rgsimages\\MNS\\ruby\\buy2.png");
+	   	Pattern buy = new Pattern("Rgsimages\\MNS\\ruby\\buy2.png");
 	   	screen.wait(buy,20000);
 	   	screen.click(buy);
 	   	
-	   	Pattern revealAll = new Pattern("C:\\Users\\pdf57170\\git\\EInstant\\EInstant\\Rgsimages\\MNS\\ruby\\revealAll3.png");
+	   	Pattern revealAll = new Pattern("Rgsimages\\MNS\\ruby\\revealAll3.png");
 	   	screen.wait(revealAll,20000);
 	   	screen.click(revealAll);
 	   	Thread.sleep(10000);
 	   	
-	   	Pattern playAgain4 = new Pattern("C:\\Users\\pdf57170\\git\\EInstant\\EInstant\\Rgsimages\\MNS\\ruby\\playAgain4.png");
+	   	Pattern playAgain4 = new Pattern("Rgsimages\\MNS\\ruby\\playAgain4.png");
 	   	screen.wait(playAgain4,20000);
 	   	screen.click(playAgain4);
 	   	

@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BuyGames{
+public class BuyGames1{
 	public static WebDriver driver;
 	@BeforeMethod
 	@Parameters("browser")
