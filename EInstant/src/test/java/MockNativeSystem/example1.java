@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class example1{
+public class example2{
 	static WebDriver driver;
 	static String filePath = "Rgsimages";
 	static File file = new File(filePath);
