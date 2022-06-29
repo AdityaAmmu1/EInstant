@@ -1,5 +1,6 @@
 package MockNativeSystem;
 
+import java.io.File;
 import java.util.Iterator;
 import java.util.Set;
 import org.openqa.selenium.By;
@@ -15,6 +16,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class example1{
 	static WebDriver driver;
+	static String filePath = "Rgsimages";
+	static File file = new File(filePath);
+	static String absPath = file.getAbsolutePath();
 	@org.testng.annotations.BeforeTest
 	public void BeforeTest() throws InterruptedException{
 			WebDriverManager.chromedriver().setup();
@@ -74,20 +78,20 @@ public class example1{
 		    }
 		    driver.manage().window().maximize();
 		Screen screen = new Screen();
-	   	Pattern sound = new Pattern("Rgsimages\\MNS\\ruby\\sound1.png");
+	   	Pattern sound = new Pattern(absPath+"\\MNS\\ruby\\sound1.png");
 	   	screen.wait(sound,40000);
 	   	screen.click(sound);
 	   	
-	   	Pattern buy = new Pattern("Rgsimages\\MNS\\ruby\\buy2.png");
+	   	Pattern buy = new Pattern(absPath+"\\MNS\\ruby\\buy2.png");
 	   	screen.wait(buy,20000);
 	   	screen.click(buy);
 	   	
-	   	Pattern revealAll = new Pattern("Rgsimages\\MNS\\ruby\\revealAll3.png");
+	   	Pattern revealAll = new Pattern(absPath+"\\MNS\\ruby\\revealAll3.png");
 	   	screen.wait(revealAll,20000);
 	   	screen.click(revealAll);
 	   	Thread.sleep(10000);
 	   	
-	   	Pattern playAgain4 = new Pattern("Rgsimages\\MNS\\ruby\\playAgain4.png");
+	   	Pattern playAgain4 = new Pattern(absPath+"\\MNS\\ruby\\playAgain4.png");
 	   	screen.wait(playAgain4,20000);
 	   	screen.click(playAgain4);
 	   	

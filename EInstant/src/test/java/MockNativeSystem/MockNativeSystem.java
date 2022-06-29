@@ -1,5 +1,6 @@
 package MockNativeSystem;
 
+import java.io.File;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -16,6 +17,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MockNativeSystem {
 	static WebDriver driver;
+	static String filePath = "Rgsimages";
+	static File file = new File(filePath);
+	static String absPath = file.getAbsolutePath();
   @org.testng.annotations.BeforeTest
   public void BeforeTest() throws InterruptedException{
 	  	//System.setProperty("webdriver.chrome.driver", "C:\\BrowserDrivers\\chromedriver.exe");
@@ -76,20 +80,20 @@ public class MockNativeSystem {
 	    }
 	    driver.manage().window().maximize();
 	Screen screen = new Screen();
-   	Pattern sound = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\ruby\\sound1.png");
+   	Pattern sound = new Pattern(absPath+"\\MNS\\ruby\\sound1.png");
    	screen.wait(sound,40000);
    	screen.click(sound);
    	
-   	Pattern buy = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\ruby\\buy2.png");
+   	Pattern buy = new Pattern(absPath+"\\MNS\\ruby\\buy2.png");
    	screen.wait(buy,20000);
    	screen.click(buy);
    	
-   	Pattern revealAll = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\ruby\\revealAll3.png");
+   	Pattern revealAll = new Pattern(absPath+"\\MNS\\ruby\\revealAll3.png");
    	screen.wait(revealAll,20000);
    	screen.click(revealAll);
    	Thread.sleep(10000);
    	
-   	Pattern playAgain4 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\ruby\\playAgain4.png");
+   	Pattern playAgain4 = new Pattern(absPath+"\\MNS\\ruby\\playAgain4.png");
    	screen.wait(playAgain4,20000);
    	screen.click(playAgain4);
    	
@@ -113,19 +117,19 @@ public class MockNativeSystem {
 	    }
 	    driver.manage().window().maximize();
 	    Screen screen = new Screen();
-     	Pattern sound = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\celtic\\sound1.png");
+     	Pattern sound = new Pattern(absPath+"\\MNS\\celtic\\sound1.png");
      	screen.wait(sound,40000);
      	screen.click(sound);
      	
-     	Pattern buy = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\celtic\\buy2.png");
+     	Pattern buy = new Pattern(absPath+"\\MNS\\celtic\\buy2.png");
      	screen.wait(buy,40000);
      	screen.click(buy);
      	
-     	Pattern revealAll = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\celtic\\revealAll3.png");
+     	Pattern revealAll = new Pattern(absPath+"\\MNS\\celtic\\revealAll3.png");
      	screen.wait(revealAll,20000);
      	screen.click(revealAll);
      	
-     	Pattern playAgain4 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\celtic\\playAgain4.png");
+     	Pattern playAgain4 = new Pattern(absPath+"\\MNS\\celtic\\playAgain4.png");
      	screen.wait(playAgain4,20000);
      	screen.click(playAgain4);
      	
@@ -151,21 +155,21 @@ public class MockNativeSystem {
 	    driver.manage().window().maximize();
 		  
 	Screen screen = new Screen();
-   	Pattern sound = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\Luckys\\audio1.png");
+   	Pattern sound = new Pattern(absPath+"\\MNS\\Luckys\\audio1.png");
    	screen.wait(sound,40000);
    	screen.click(sound);
    	
-   	Pattern buy = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\Luckys\\buy1.png");
+   	Pattern buy = new Pattern(absPath+"\\MNS\\Luckys\\buy1.png");
    	screen.wait(buy,20000);
    	screen.click(buy);
    	Thread.sleep(3000);
    	
-   	Pattern revealAll = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\Luckys\\revealAll2.png");
+   	Pattern revealAll = new Pattern(absPath+"\\MNS\\Luckys\\revealAll2.png");
    	screen.wait(revealAll,20000);
    	screen.click(revealAll);
    	Thread.sleep(2000);
    	
-   	Pattern playAgain4 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\Luckys\\playAgain3.png");
+   	Pattern playAgain4 = new Pattern(absPath+"\\MNS\\Luckys\\playAgain3.png");
    	screen.wait(playAgain4,20000);
    	driver.close();
    	driver.switchTo().window(parentID); //switching back to Parent window
@@ -189,25 +193,25 @@ public class MockNativeSystem {
 	    driver.manage().window().maximize();
 		  
 	Screen screen = new Screen();
-   	Pattern sound = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\BallooniesSwapAndPopCOM\\sound1.png");
+   	Pattern sound = new Pattern(absPath+"\\MNS\\BallooniesSwapAndPopCOM\\sound1.png");
    	screen.wait(sound,40000);
    	screen.click(sound);
    	
-   	Pattern ok = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\BallooniesSwapAndPopCOM\\ok2.png");
+   	Pattern ok = new Pattern(absPath+"\\MNS\\BallooniesSwapAndPopCOM\\ok2.png");
    	screen.wait(ok,20000);
    	screen.click(ok);
    	Thread.sleep(3000);
    	
-   	Pattern buy = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\BallooniesSwapAndPopCOM\\buy3.png");
+   	Pattern buy = new Pattern(absPath+"\\MNS\\BallooniesSwapAndPopCOM\\buy3.png");
    	screen.wait(buy,20000);
    	screen.click(buy);
    	Thread.sleep(10000);
    	
-   	Pattern revealAll = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\BallooniesSwapAndPopCOM\\revealAll4.png");
+   	Pattern revealAll = new Pattern(absPath+"\\MNS\\BallooniesSwapAndPopCOM\\revealAll4.png");
    	screen.wait(revealAll,20000);
    	screen.click(revealAll);
    	
-   	Pattern playAgain4 = new Pattern("C:\\Users\\pdf57170\\Desktop\\sekuliImages\\MNS\\BallooniesSwapAndPopCOM\\playAgain5.png");
+   	Pattern playAgain4 = new Pattern(absPath+"\\MNS\\BallooniesSwapAndPopCOM\\playAgain5.png");
    	screen.wait(playAgain4,200000);
    	driver.close();
    	driver.switchTo().window(parentID); //switching back to Parent window

@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MockNativeSystem.ex2">
+      <class name="MockNativeSystem.MockNativeSystem">
         <methods>
-          <include name="f"/>
+          <include name="CelticClouds"/>
+          <include name="closeWindow"/>
+          <include name="Lucky"/>
+          <include name="BeforeTest"/>
+          <include name="BallooniesSwapAndPopCOM"/>
+          <include name="Ruby"/>
         </methods>
-      </class> <!-- MockNativeSystem.ex2 -->
+      </class> <!-- MockNativeSystem.MockNativeSystem -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
