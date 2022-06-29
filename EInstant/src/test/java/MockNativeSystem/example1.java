@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class example1{
+public class example2{
 	static WebDriver driver;
 	@org.testng.annotations.BeforeTest
 	public void BeforeTest() throws InterruptedException{
