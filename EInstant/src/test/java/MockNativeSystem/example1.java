@@ -63,7 +63,8 @@ public class example1{
 		  driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/div/section[2]/div/div/div/div[1]/div/div[2]/div/div/input")).sendKeys("ruby");
 		  Thread.sleep(5000);
 		  driver.findElement(By.xpath("//*[@id=\"skb-gamelist-wrapper\"]/div[1]/table/tbody/tr/td[4]/table/tbody/tr[3]/td[2]/a[2]")).click();
-		   Set<String> ids = driver.getWindowHandles();
+		   
+		  Set<String> ids = driver.getWindowHandles();
 		    Iterator<String> i = ids.iterator();
 		    String parentID = i.next(); //Parent Window
 		    while(i.hasNext())
@@ -93,5 +94,6 @@ public class example1{
 	   	driver.close();
 	   	driver.switchTo().window(parentID); //switching back to Parent window
 	   	driver.navigate().refresh();
+	   	
 	  }
 }

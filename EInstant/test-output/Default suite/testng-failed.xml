@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MockNativeSystem.AutoReveal">
+      <class name="MockNativeSystem.ex2">
         <methods>
-          <include name="celtic"/>
-          <include name="BeforeTest"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- MockNativeSystem.AutoReveal -->
+      </class> <!-- MockNativeSystem.ex2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
