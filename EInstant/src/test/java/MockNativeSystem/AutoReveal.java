@@ -1,27 +1,21 @@
 package MockNativeSystem;
 
-
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.time.Duration;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.safari.SafariDriver.WindowType;
-import org.openqa.selenium.support.ui.Select;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -29,6 +23,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AutoReveal {
 	static WebDriver driver;
+	static String filePath = "Rgsimages";
+	static File file = new File(filePath);
+	static String absPath = file.getAbsolutePath();
   @BeforeTest
   public void BeforeTest() throws InterruptedException {
 	  	WebDriverManager.chromedriver().setup();
@@ -38,7 +35,7 @@ public class AutoReveal {
 		driver.findElement(By.xpath("//*[@id=\"userName\"]")).sendKeys("aditest1");
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("123456");
 		driver.findElement(By.xpath("//*[@id=\"loginBtn\"]")).click();
-		Thread.sleep(25000);
+		Thread.sleep(30000);
 		driver.findElement(By.xpath("//*[@id=\"ixfInstantWin\"]/div/div[1]/h3")).click();// click on ixf Instant win tag
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//*[@id=\"resources\"]/form/div/div[1]/div/span/span[1]/span/span[2]")).click();// Click on drop down RGS server 
@@ -74,8 +71,8 @@ public class AutoReveal {
   }
 
 @Test
-public void celtic() throws FindFailed, InterruptedException, AWTException{
-	  driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/div/section[2]/div/div/div/div[1]/div/div[2]/div/div/input")).sendKeys("celtic");
+public void Auto() throws FindFailed, InterruptedException, AWTException{
+	  driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/div/section[2]/div/div/div/div[1]/div/div[2]/div/div/input")).sendKeys("ruby");
 	  Thread.sleep(5000);
 	  driver.findElement(By.xpath("//*[@id=\"skb-gamelist-wrapper\"]/div[1]/table/tbody/tr/td[4]/table/tbody/tr[3]/td[2]/a[2]")).click();
 	   Set<String> ids = driver.getWindowHandles();
@@ -88,25 +85,28 @@ public void celtic() throws FindFailed, InterruptedException, AWTException{
 	    }
 	    driver.manage().window().maximize();
 	Screen screen = new Screen();
- 	Pattern sound = new Pattern("C:\\Users\\pdf57170\\git\\EInstant\\EInstant\\Rgsimages\\MNS\\celtic\\sound1.png");
+ 	Pattern sound = new Pattern(absPath+"\\MNS\\ruby\\sound1.png");
  	screen.wait(sound,40000);
  	screen.click(sound);
  	
-// 	Pattern buy = new Pattern("C:\\Users\\pdf57170\\git\\EInstant\\EInstant\\Rgsimages\\MNS\\celtic\\buy2.png");
-// 	screen.wait(buy,10000);
-// 	screen.click(buy);
-// 	Thread.sleep(5000);
-// 	
-// 	Pattern auto1 = new Pattern("C:\\Users\\pdf57170\\git\\EInstant\\EInstant\\Rgsimages\\MNS\\celtic\\Mns-Auto1.png");
-// 	screen.wait(auto1,20000);
-// 	screen.click(auto1);
-// 	
-// 	Pattern auto2 = new Pattern("C:\\Users\\pdf57170\\git\\EInstant\\EInstant\\Rgsimages\\MNS\\celtic\\Mns-Auto2.png");
-// 	screen.wait(auto2,20000);
-// 	screen.click(auto2);
+ 	Pattern buy = new Pattern(absPath+"\\MNS\\ruby\\buy2.png");
+ 	screen.wait(buy,20000);
+ 	screen.click(buy);
+ 	Thread.sleep(5000);
+ 	
+ 	Pattern AutoReveal1 = new Pattern(absPath+"\\MNS\\ruby\\AutoReveal1.png");
+ 	screen.wait(AutoReveal1,20000);
+ 	screen.click(AutoReveal1);
+ 	Thread.sleep(3000);
+ 	
+ 	Pattern AutoReveal2 = new Pattern(absPath+"\\MNS\\ruby\\AutoReveal2.png");
+ 	screen.wait(AutoReveal2,20000);
+ 	screen.click(AutoReveal2);
  	Thread.sleep(2000);
+ 	
  	driver.close();
- 	driver.switchTo().window(parentID);
+ 	Thread.sleep(3000);
+ 	driver.switchTo().window(parentID); //switching back to Parent window
  	driver.navigate().refresh();
  	Thread.sleep(2000);
  	Robot robot = new Robot();
@@ -118,7 +118,6 @@ public void celtic() throws FindFailed, InterruptedException, AWTException{
     robot.keyRelease(KeyEvent.VK_T);
     robot.keyRelease(KeyEvent.VK_CONTROL);
 
-    
     //Switch focus to new tab
     Thread.sleep(4000);
     ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
@@ -133,25 +132,64 @@ public void celtic() throws FindFailed, InterruptedException, AWTException{
  	driver.findElement(By.xpath("//*[@id=\"gamesInProgress\"]/span[2]")).click();
  	Thread.sleep(2000);
  	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[3]/search-condition-operator-section/div[1]/div[1]/p-dropdown/div/label")).click();
- 	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[3]/search-condition-operator-section/div[1]/div[1]/p-dropdown/div/div[4]/div[1]/input")).sendKeys("Georgia Lottery"+Keys.ARROW_DOWN+Keys.ENTER);
+ 	Thread.sleep(2000);
+ 	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[3]/search-condition-operator-section/div[1]/div[1]/p-dropdown/div/div[4]/div[1]/input")).sendKeys("Georgia Lottery"+Keys.ARROW_DOWN+Keys.ENTER);//Enter the Operator
+ 	Thread.sleep(2000);
  	WebElement ddown = driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[3]/search-condition-operator-section/div[1]/div[2]/p-dropdown/div/label"));
  	ddown.click();
- 	//driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[3]/search-condition-operator-section/div[1]/div[2]/p-dropdown/div/div[4]/div[1]/input")).sendKeys("GA SIT2"+Keys.ENTER);
- 	Select select = new Select(ddown);
- 	select.selectByIndex(2);
- 	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[3]/search-condition-operator-section/div[1]/div[2]/p-dropdown/div/div[4]/div[2]/ul/li/span")).click();
- 	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[4]/button[2]/span")).click();
- 	Thread.sleep(2000);
- 	driver.findElement(By.cssSelector("#showResultDiv > div.pagination-table-div > div > p-table > div > div.ui-table-scrollable-wrapper.ng-star-inserted > div > div.ui-table-scrollable-body > table > tbody > tr > td:nth-child(1) > a")).click();
- 	Thread.sleep(2000);
- 	driver.findElement(By.className("//*[@id=\"showResultDiv\"]/div[2]/div/p-table/div/div[1]/div/div[2]/table/tbody/tr/td[5]/label")).click();
- 	driver.findElement(By.xpath("//*[@id=\"showResultDiv\"]/div[1]/div[1]/button[1]/span")).click();
- 	Thread.sleep(2000);
- 	driver.findElement(By.xpath("/html/body/app-root/app-home-page/div/ul/li[2]/div[2]/app-games-inprogress/search-actions/div/p-dialog/div/div[3]/p-footer/button[2]/span")).click();
- 	Thread.sleep(2000);
- 	driver.findElement(By.xpath("/html/body/app-root/app-home-page/div/ul/li[2]/div[2]/app-games-inprogress/search-actions/div/p-dialog/div/div[3]/p-footer/button[2]/span")).click();
+ 	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[3]/search-condition-operator-section/div[1]/div[2]/p-dropdown/div/div[4]/div[1]/input")).sendKeys("GA SIT2"+Keys.DOWN+Keys.ENTER); //Enter Skin code
  	Thread.sleep(1000);
- 	driver.switchTo().window(parentID);
+ 	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[4]/button[2]/span")).click();//Select search
+ 	Thread.sleep(5000);
+ 	driver.findElement(By.cssSelector("#showResultDiv > div.pagination-table-div > div > p-table > div > div.ui-table-scrollable-wrapper.ng-star-inserted > div > div.ui-table-scrollable-body > table > tbody > tr > td:nth-child(5) > label")).click(); //Click on the  Game TXn ID 
+ 	Thread.sleep(5000);
+ 	driver.findElement(By.xpath("//*[@id=\"showResultDiv\"]/div[1]/div[1]/button[2]/span")).click();//click on void
+ 	Thread.sleep(5000);
+ 	driver.findElement(By.xpath("/html/body/app-root/app-home-page/div/ul/li[2]/div[2]/app-games-inprogress/search-actions/div/p-dialog/div/div[3]/p-footer/button[2]/span")).click();//click on void in the popup
+ 	Thread.sleep(7000);
+ 	driver.findElement(By.xpath("/html/body/app-root/app-home-page/div/ul/li[2]/div[2]/app-games-inprogress/search-actions/div/p-dialog/div/div[3]/p-footer/button/span")).click();//click on the cancel button in the pop-up
+ 	Thread.sleep(5000);
+// 	Alert alert = driver.switchTo().alert();
+// 	Thread.sleep(5000);
+// 	alert.accept();
+// 	Thread.sleep(5000);
+// 	alert.dismiss();
+// 	Thread.sleep(2000);
+ 	driver.switchTo().window(tabs.get(0));
+ 	driver.navigate().refresh();
+ 	
+ 	//Play the same game again
+ 	driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/div/section[2]/div/div/div/div[1]/div/div[2]/div/div/input")).sendKeys("lucky");
+	  Thread.sleep(5000);
+	  driver.findElement(By.xpath("//*[@id=\"skb-gamelist-wrapper\"]/div[1]/table/tbody/tr/td[4]/table/tbody/tr[3]/td[2]/a[2]")).click();
+  while(i.hasNext())
+  {
+      
+	  String childID1 = i.next(); //Child Windows
+      driver.switchTo().window(childID1); // Iterating over child windows
+  }
+	    driver.manage().window().maximize();
+		  
+ 	Pattern sound1 = new Pattern(absPath+"\\MNS\\Luckys\\audio1.png");
+ 	screen.wait(sound1,40000);
+ 	screen.click(sound1);
+ 	
+ 	Pattern buy1 = new Pattern(absPath+"\\MNS\\Luckys\\buy1.png");
+ 	screen.wait(buy1,20000);
+ 	screen.click(buy1);
+ 	Thread.sleep(3000);
+ 	
+ 	Pattern revealAll = new Pattern(absPath+"\\MNS\\Luckys\\revealAll2.png");
+ 	screen.wait(revealAll,20000);
+ 	screen.click(revealAll);
+ 	Thread.sleep(2000);
+ 	
+ 	Pattern playAgain4 = new Pattern(absPath+"\\MNS\\Luckys\\playAgain3.png");
+ 	screen.wait(playAgain4,20000);
+ 	driver.close();
+ 	driver.switchTo().window(parentID); //switching back to Parent window
+ 	driver.navigate().refresh();
+   
 	}
 }
  	
