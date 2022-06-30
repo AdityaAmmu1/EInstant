@@ -16,6 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -140,43 +141,43 @@ public void Auto() throws FindFailed, InterruptedException, AWTException{
  	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[3]/search-condition-operator-section/div[1]/div[2]/p-dropdown/div/div[4]/div[1]/input")).sendKeys("GA SIT2"+Keys.DOWN+Keys.ENTER); //Enter Skin code
  	Thread.sleep(1000);
  	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[4]/button[2]/span")).click();//Select search
- 	Thread.sleep(5000);
+ 	Thread.sleep(3000);
  	driver.findElement(By.cssSelector("#showResultDiv > div.pagination-table-div > div > p-table > div > div.ui-table-scrollable-wrapper.ng-star-inserted > div > div.ui-table-scrollable-body > table > tbody > tr > td:nth-child(5) > label")).click(); //Click on the  Game TXn ID 
- 	Thread.sleep(5000);
- 	driver.findElement(By.xpath("//*[@id=\"showResultDiv\"]/div[1]/div[1]/button[2]/span")).click();//click on void
- 	Thread.sleep(5000);
- 	driver.findElement(By.xpath("/html/body/app-root/app-home-page/div/ul/li[2]/div[2]/app-games-inprogress/search-actions/div/p-dialog/div/div[3]/p-footer/button[2]/span")).click();//click on void in the popup
- 	Thread.sleep(7000);
+ 	Thread.sleep(3000);
+ 	driver.findElement(By.xpath("//*[@id=\"showResultDiv\"]/div[1]/div[1]/button[1]/span")).click();//click on Auto-Reveal on portal
+ 	Thread.sleep(3000);
+ 	driver.findElement(By.xpath("/html/body/app-root/app-home-page/div/ul/li[2]/div[2]/app-games-inprogress/search-actions/div/p-dialog/div/div[3]/p-footer/button[2]/span")).click();//click on Auto-Reveal in the popup
+ 	Thread.sleep(3000);
  	driver.findElement(By.xpath("/html/body/app-root/app-home-page/div/ul/li[2]/div[2]/app-games-inprogress/search-actions/div/p-dialog/div/div[3]/p-footer/button/span")).click();//click on the cancel button in the pop-up
- 	Thread.sleep(5000);
-// 	Alert alert = driver.switchTo().alert();
-// 	Thread.sleep(5000);
-// 	alert.accept();
-// 	Thread.sleep(5000);
-// 	alert.dismiss();
-// 	Thread.sleep(2000);
+ 	Thread.sleep(3000);
+
  	driver.switchTo().window(tabs.get(0));
  	driver.navigate().refresh();
- 	
- 	//Play the same game again
- 	driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/div/section[2]/div/div/div/div[1]/div/div[2]/div/div/input")).sendKeys("lucky");
+	}
+@Test
+public void Lucky() throws FindFailed, InterruptedException{
+	  driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/div/section[2]/div/div/div/div[1]/div/div[2]/div/div/input")).sendKeys("lucky");
 	  Thread.sleep(5000);
 	  driver.findElement(By.xpath("//*[@id=\"skb-gamelist-wrapper\"]/div[1]/table/tbody/tr/td[4]/table/tbody/tr[3]/td[2]/a[2]")).click();
+  
+  Set<String> ids = driver.getWindowHandles();
+  Iterator<String> i = ids.iterator();
+  String parentID = i.next(); //Parent Window
   while(i.hasNext())
   {
-      
-	  String childID1 = i.next(); //Child Windows
-      driver.switchTo().window(childID1); // Iterating over child windows
+      String childID = i.next(); //Child Windows
+      driver.switchTo().window(childID); // Iterating over child windows
   }
 	    driver.manage().window().maximize();
 		  
- 	Pattern sound1 = new Pattern(absPath+"\\MNS\\Luckys\\audio1.png");
- 	screen.wait(sound1,40000);
- 	screen.click(sound1);
+	Screen screen = new Screen();
+ 	Pattern sound = new Pattern(absPath+"\\MNS\\Luckys\\audio1.png");
+ 	screen.wait(sound,40000);
+ 	screen.click(sound);
  	
- 	Pattern buy1 = new Pattern(absPath+"\\MNS\\Luckys\\buy1.png");
- 	screen.wait(buy1,20000);
- 	screen.click(buy1);
+ 	Pattern buy = new Pattern(absPath+"\\MNS\\Luckys\\buy1.png");
+ 	screen.wait(buy,20000);
+ 	screen.click(buy);
  	Thread.sleep(3000);
  	
  	Pattern revealAll = new Pattern(absPath+"\\MNS\\Luckys\\revealAll2.png");
@@ -189,7 +190,10 @@ public void Auto() throws FindFailed, InterruptedException, AWTException{
  	driver.close();
  	driver.switchTo().window(parentID); //switching back to Parent window
  	driver.navigate().refresh();
-   
+}
+	@AfterTest()
+	public static void closeWindow() {
+		driver.quit();
 	}
 }
  	

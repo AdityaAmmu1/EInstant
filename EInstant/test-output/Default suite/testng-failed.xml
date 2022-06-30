@@ -5,7 +5,8 @@
     <classes>
       <class name="MockNativeSystem.AutoReveal">
         <methods>
-          <include name="Ruby"/>
+          <include name="closeWindow"/>
+          <include name="Lucky"/>
           <include name="BeforeTest"/>
         </methods>
       </class> <!-- MockNativeSystem.AutoReveal -->
