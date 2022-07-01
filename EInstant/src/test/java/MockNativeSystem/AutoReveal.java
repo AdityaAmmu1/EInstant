@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
@@ -29,8 +29,8 @@ public class AutoReveal {
 	static String absPath = file.getAbsolutePath();
   @BeforeTest
   public void BeforeTest() throws InterruptedException {
-	  	WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+	  	WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();
 		driver.get("http://mns-ps02.lab.wagerworks.com:8080/MNS2/login.html");
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//*[@id=\"userName\"]")).sendKeys("aditest1");
