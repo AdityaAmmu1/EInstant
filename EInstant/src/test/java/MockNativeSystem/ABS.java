@@ -23,6 +23,7 @@ public class ABS {
 //		String filePath = "Rgsimages";
 //		File file = new File(filePath);
 //		String absPath = file.getAbsolutePath();
+//  	GIT TRY
 		System.out.println(absPath);
      
 //		String localDir = System.getProperty("user.dir");
