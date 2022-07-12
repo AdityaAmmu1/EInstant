@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MockNativeSystem.AutoReveal">
+      <class name="PLLottery.Example">
         <methods>
-          <include name="closeWindow"/>
-          <include name="Lucky"/>
-          <include name="BeforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="f"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- MockNativeSystem.AutoReveal -->
+      </class> <!-- PLLottery.Example -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
