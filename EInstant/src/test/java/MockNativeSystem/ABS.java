@@ -12,7 +12,7 @@ import org.sikuli.script.Screen;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ABS {
+public class ABS{
 	static WebDriver driver;
 	static String filePath = "Rgsimages";
 	static File file = new File(filePath);
