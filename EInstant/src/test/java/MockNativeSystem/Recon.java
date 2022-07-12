@@ -40,8 +40,8 @@ public class Recon {
 	//driver.findElement(By.xpath("//*[@id=\"outcomeData\"]/div[2]/div/div[4]/div[2]/input")).sendKeys("a");//host name
 	//Thread.sleep(2000);
 	driver.findElement(By.xpath("//*[@id=\"outcomeData\"]/div[4]/div/div[3]/div[4]/div[3]/a")).click();//validate and heart beat
-	Thread.sleep(2000);
-	driver.findElement(By.xpath("//*[@id=\"ui-tabpanel-18\"]/div/endpoint-intmodes-page/edit-endpoint/div/p-dialog/div/div[3]/p-footer/button[1]")).click();//save endpoint
+	Thread.sleep(5000);
+	driver.findElement(By.xpath("//*[@id=\"ui-tabpanel-9\"]/div/endpoint-intmodes-page/edit-endpoint/div/p-dialog/div/div[3]/p-footer/button[1]/span")).click();//save endpoint
 	Thread.sleep(2000);
 	}
 

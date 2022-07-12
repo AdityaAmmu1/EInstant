@@ -11,7 +11,7 @@ import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 import org.testng.annotations.Test;
-
+import com.util.JiraPolicy;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class example1{
@@ -19,6 +19,7 @@ public class example1{
 	static String filePath = "Rgsimages";
 	static File file = new File(filePath);
 	static String absPath = file.getAbsolutePath();
+	
 	@org.testng.annotations.BeforeTest
 	public void BeforeTest() throws InterruptedException{
 			WebDriverManager.edgedriver().setup();
@@ -62,9 +63,10 @@ public class example1{
 		    driver.findElement(By.xpath("//*[@id=\"resources\"]/form/div/div[9]/div[1]/button")).click();
 		    Thread.sleep(5000);
 	  }
-	 @Test
+	 
+	@Test
 	 public void Ruby() throws FindFailed, InterruptedException{
-		  driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/div/section[2]/div/div/div/div[1]/div/div[2]/div/div/input")).sendKeys("Color Cubes");
+		  driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/div/section[2]/div/div/div/div[1]/div/div[2]/div/div/input")).sendKeys("sdgzd");
 		  Thread.sleep(5000);
 		  driver.findElement(By.xpath("//*[@id=\"skb-gamelist-wrapper\"]/div[1]/table/tbody/tr/td[4]/table/tbody/tr[3]/td[2]/a[2]")).click();
 		   

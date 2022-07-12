@@ -220,7 +220,6 @@ public class DemoGames{
 //			  screen.wait(diamond,5000);
 //			  screen.click(diamond);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[8]/img")).click();
-
 			  
 			  Thread.sleep(15000);
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
