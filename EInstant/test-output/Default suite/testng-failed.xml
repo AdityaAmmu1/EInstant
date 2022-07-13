@@ -6,7 +6,7 @@
       <class name="PLLottery.Example">
         <methods>
           <include name="beforeMethod"/>
-          <include name="f"/>
+          <include name="Duszki"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- PLLottery.Example -->
