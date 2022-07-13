@@ -22,6 +22,7 @@ public class BuyGames1{
 	static String filePath = "Rgsimages";
 	static File file = new File(filePath);
 	static String absPath = file.getAbsolutePath();
+	static JavascriptExecutor js = (JavascriptExecutor) driver;
 	 @BeforeTest
 	  public void beforeMethod() throws InterruptedException, FindFailed {
 		  WebDriverManager.chromedriver().setup();
@@ -54,6 +55,129 @@ public class BuyGames1{
 				Thread.sleep(10000);
 				driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/div[4]/div/div[1]/div/div/div[2]/div[2]/button")).click();			
 		}
+	 @Test
+		public void stowka() throws FindFailed, InterruptedException{
+			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+			Thread.sleep(5000);
+			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[3]")).click();
+			Thread.sleep(15000);
+			 Screen s = new Screen();
+			 js.executeScript("window.scrollBy(0,550)", "");
+			Pattern demo = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
+			s.wait(demo,40000);
+			s.click(demo);
+			Pattern FP = new Pattern(absPath+"\\Słówka\\FP.png").similar(0.7);
+			s.wait(FP,40000);
+			s.click(FP);
+			Pattern audio = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
+			s.wait(audio,40000);
+			s.click(audio);
+			Pattern demobtn = new Pattern(absPath+"\\PolandGames\\Słówka\\demobtn.png").similar(0.5);
+			s.wait(demobtn,40000);
+			s.click(demobtn);
+			Thread.sleep(2000);
+			Pattern auto = new Pattern(absPath+"\\PolandGames\\Słówka\\auto.png").similar(0.5);
+			s.wait(auto,40000);
+			s.click(auto);
+			Thread.sleep(1000);
+			Pattern settings= new Pattern(absPath+"\\PolandGames\\Słówka\\setting.png").similar(0.5);
+			s.wait(settings,40000);
+			s.click(settings);
+			Thread.sleep(1000);
+			Pattern mtm= new Pattern(absPath+"\\PolandGames\\Słówka\\mtm.png").similar(0.5);
+			s.wait(mtm,40000);
+			s.click(mtm);
+			Thread.sleep(2000);
+			Pattern buy= new Pattern(absPath+"\\PolandGames\\Słówka\\place.png").similar(0.5);
+			s.wait(buy,40000);
+			s.click(buy);
+			Thread.sleep(2000);
+			s.click(absPath+"\\PolandGames\\home.png");
+			Thread.sleep(4000);
+			js.executeScript("window.scrollBy(1000,0)");	
+			
+		}
+		@Test	
+		public void GF() throws FindFailed, InterruptedException{
+			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+			Thread.sleep(5000);
+
+			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[1]")).click();
+			 Thread.sleep(15000);
+			 Screen s21 = new Screen();
+			 js.executeScript("window.scrollBy(0,550)", "");
+
+			Pattern demo1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
+			s21.wait(demo1,40000);
+			s21.click(demo1);
+			Pattern FP1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Frontpage.png").similar(0.7);
+			s21.wait(FP1,40000);
+			s21.click(FP1);
+			Pattern audio1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
+			s21.wait(audio1,40000);
+			s21.click(audio1);
+			Pattern demobtn1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demobtn.png").similar(0.5);
+			s21.wait(demobtn1,40000);
+			s21.click(demobtn1);
+			Pattern auto1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-auto.png").similar(0.5);
+			s21.wait(auto1,40000);
+			s21.click(auto1);
+			Pattern settings1= new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\settings.png").similar(0.5);
+			s21.wait(settings1,40000);
+			s21.click(settings1);
+			Thread.sleep(1000);
+			Pattern mtm1= new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\mtm.png").similar(0.5);
+			s21.wait(mtm1,40000);
+			s21.click(mtm1);
+			Thread.sleep(2000);
+			Pattern buy1= new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\place.png").similar(0.5);
+			s21.wait(buy1,40000);
+			s21.click(buy1);
+			Thread.sleep(2000);
+			Thread.sleep(2000);
+			s21.click(absPath+"\\home.png");
+			Thread.sleep(4000);
+			js.executeScript("window.scrollBy(1000,0)");		
+		}
+		@Test
+		public void HP() throws FindFailed, InterruptedException {
+			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+			Thread.sleep(5000);
+
+			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[4]")).click();
+			 Thread.sleep(15000);
+			 Screen s3 = new Screen();
+			 js.executeScript("window.scrollBy(0,550)", "");
+			Pattern demo3 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
+			s3.wait(demo3,40000);
+			s3.click(demo3);
+			Pattern FP3 = new Pattern(absPath+"\\PolandGames\\HP\\FP.png").similar(0.7);
+			s3.wait(FP3,40000);
+			s3.click(FP3);
+			Pattern audio3 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
+			s3.wait(audio3,40000);
+			s3.click(audio3);
+			Pattern demobtn3 = new Pattern(absPath+"\\PolandGames\\HP\\demobtn.png").similar(0.5);
+			s3.wait(demobtn3,40000);
+			s3.click(demobtn3);
+			Thread.sleep(2000);
+			Pattern settings3= new Pattern(absPath+"\\PolandGames\\HP\\settings.png").similar(0.5);
+			s3.wait(settings3,40000);
+			s3.click(settings3);
+			Thread.sleep(1000);
+			Pattern mtm3= new Pattern(absPath+"\\PolandGames\\HP\\mtm.png").similar(0.5);
+			s3.wait(mtm3,40000);
+			s3.click(mtm3);
+			Thread.sleep(2000);
+			Pattern buy3= new Pattern(absPath+"\\PolandGames\\HP\\placebtn.png").similar(0.5);
+			s3.wait(buy3,40000);
+			s3.click(buy3);
+			Thread.sleep(2000);
+			s3.click(absPath+"\\PolandGames\\home.png");
+			Thread.sleep(4000);
+			js.executeScript("window.scrollBy(1000,0)");	
+		}
+
 	@Test()
 	  public void Diamond() throws InterruptedException, FindFailed {
 			  
