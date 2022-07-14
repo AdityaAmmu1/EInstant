@@ -53,6 +53,7 @@ public class DemoGames1{
 		 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[2]")).click();
 		 Thread.sleep(15000);
 		 Screen s = new Screen();
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
 		 js.executeScript("window.scrollBy(0,550)", "");
 		Pattern demo = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
 		s.wait(demo,40000);
@@ -78,6 +79,7 @@ public class DemoGames1{
 		driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[3]")).click();
 		Thread.sleep(15000);
 		 Screen s = new Screen();
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
 		 js.executeScript("window.scrollBy(0,550)", "");
 		Pattern demo = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
 		s.wait(demo,40000);
@@ -109,6 +111,7 @@ public class DemoGames1{
 		driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[1]")).click();
 		 Thread.sleep(15000);
 		 Screen s21 = new Screen();
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
 		 js.executeScript("window.scrollBy(0,550)", "");
 
 		Pattern demo1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
@@ -139,6 +142,7 @@ public class DemoGames1{
 		driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[4]")).click();
 		 Thread.sleep(15000);
 		 Screen s3 = new Screen();
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
 		 js.executeScript("window.scrollBy(0,550)", "");
 		Pattern demo3 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
 		s3.wait(demo3,40000);
