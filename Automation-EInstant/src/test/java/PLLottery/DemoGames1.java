@@ -46,6 +46,31 @@ public class DemoGames1{
 			Thread.sleep(4000);
 			
 		}
+	 @Test
+	 public void ss() throws InterruptedException, FindFailed {
+		 driver.findElement(By.xpath("//*[@id=\\\"__layout\\\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		 Thread.sleep(5000);
+		 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[2]")).click();
+		 Thread.sleep(15000);
+		 Screen s = new Screen();
+		 js.executeScript("window.scrollBy(0,550)", "");
+		Pattern demo = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
+		s.wait(demo,40000);
+		s.click(demo);
+		Pattern FP = new Pattern(absPath+"\\Smocze Skarby\\FP.png").similar(0.7);
+		s.wait(FP,40000);
+		s.click(FP);
+		Pattern audio = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
+		s.wait(audio,40000);
+		s.click(audio);
+		Pattern demobtn = new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\demobtn.png").similar(0.5);
+		s.wait(demobtn,40000);
+		s.click(demobtn);
+		Thread.sleep(2000);
+		s.click(absPath+"\\PolandGames\\home.png");
+		Thread.sleep(4000);
+		js.executeScript("window.scrollBy(1000,0)");	
+		 }
 	@Test
 	public void stowka() throws FindFailed, InterruptedException{
 		driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -57,7 +82,7 @@ public class DemoGames1{
 		Pattern demo = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
 		s.wait(demo,40000);
 		s.click(demo);
-		Pattern FP = new Pattern(absPath+"\\Słówka\\FP.png").similar(0.7);
+		Pattern FP = new Pattern(absPath+"\\PolandGames\\Słówka\\FP.png").similar(0.7);
 		s.wait(FP,40000);
 		s.click(FP);
 		Pattern audio = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
