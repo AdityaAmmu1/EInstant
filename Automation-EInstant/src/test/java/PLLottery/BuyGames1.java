@@ -37,23 +37,27 @@ public class BuyGames1{
 			driver.get("https://staging.devlotto.pl/");
 			Thread.sleep(3000);
 			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/div[4]/div[2]/div[3]/div/button")).click();
-			driver.findElement(By.xpath("//*[@id=\"zowieHideIcon\"]")).click(); //Remove the crossicon below
-			Thread.sleep(4000);
-			driver.manage().window().maximize();
-			   driver.get("https://staging.devlotto.pl/");
-				driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/div[3]/div[2]/div[3]/div/button")).click();
-				driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[3]/div[1]/div/div[2]/div[1]/div/div[2]/button")).click();
-				//entering uid
-				driver.findElement(By.xpath("//*[@id=\"username-dropdown-login\"]")).sendKeys("gierka001");
-				//entering password
-				driver.findElement(By.xpath("//*[@id=\"password-dropdown-login\"]")).sendKeys("Welcome1");
-				System.out.println("login button");
-				Screen screen1 = new Screen();
-				Pattern submit = new Pattern(absPath+"\\PolandGames\\submit.png");
-				screen1.wait(submit,40000);
-				screen1.click(submit);
-				Thread.sleep(10000);
-				driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/div[4]/div/div[1]/div/div/div[2]/div[2]/button")).click();			
+			Thread.sleep(1000);
+			driver.findElement(By.cssSelector("#__layout > div > div.layout-home > div.cookie-wall.active > div > div > div.action-control.type1 > button")).click();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[3]/div[1]/div/div[2]/div[1]/button/div[2]/span")).click();
+			Thread.sleep(1000);
+			//entering uid
+			driver.findElement(By.xpath("//*[@id=\"username-dropdown-login\"]")).sendKeys("Mrosin80");
+			//entering password
+			driver.findElement(By.xpath("//*[@id=\"password-dropdown-login\"]")).sendKeys("Welcome1");
+			System.out.println("login button");
+			Screen screen1 = new Screen();
+			Pattern submit = new Pattern(absPath+"\\PolandGames\\submit.png");
+			screen1.wait(submit,40000);
+			screen1.click(submit);
+			Thread.sleep(10000);
+			Screen s2= new Screen();
+			if(s2.exists(absPath+"\\zamknij.png")!= null){
+				Pattern zamknij = new Pattern(absPath+"\\zamknij.png").similar(0.7);
+				s2.wait(zamknij,40000);
+				s2.click(zamknij);
+				}
 		}
 	 @Test
 	 public void ss() throws InterruptedException, FindFailed {
@@ -70,12 +74,14 @@ public class BuyGames1{
 		Pattern FP = new Pattern(absPath+"\\Smocze Skarby\\FP.png").similar(0.7);
 		s.wait(FP,40000);
 		s.click(FP);
+		/*
 		Pattern audio = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
 		s.wait(audio,40000);
 		s.click(audio);
 		Pattern demobtn = new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\demobtn.png").similar(0.5);
 		s.wait(demobtn,40000);
 		s.click(demobtn);
+		*/
 		Thread.sleep(2000);
 		Pattern settings= new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\setting.png").similar(0.5);
 		s.wait(settings,40000);
@@ -88,6 +94,7 @@ public class BuyGames1{
 		Pattern buy= new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\place.png").similar(0.5);
 		s.wait(buy,40000);
 		s.click(buy);
+		s.wait(buy,40000);
 		s.click(absPath+"\\PolandGames\\home.png");
 		Thread.sleep(4000);
 		js.executeScript("window.scrollBy(1000,0)");	
@@ -110,13 +117,13 @@ public class BuyGames1{
 			Pattern audio = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
 			s.wait(audio,40000);
 			s.click(audio);
-			Pattern demobtn = new Pattern(absPath+"\\PolandGames\\Słówka\\demobtn.png").similar(0.5);
+			/*Pattern demobtn = new Pattern(absPath+"\\PolandGames\\Słówka\\demobtn.png").similar(0.5);
 			s.wait(demobtn,40000);
 			s.click(demobtn);
 			Thread.sleep(2000);
 			Pattern auto = new Pattern(absPath+"\\PolandGames\\Słówka\\auto.png").similar(0.5);
 			s.wait(auto,40000);
-			s.click(auto);
+			s.click(auto);*/
 			Thread.sleep(1000);
 			Pattern settings= new Pattern(absPath+"\\PolandGames\\Słówka\\setting.png").similar(0.5);
 			s.wait(settings,40000);
@@ -158,12 +165,12 @@ public class BuyGames1{
 			Pattern audio1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
 			s21.wait(audio1,40000);
 			s21.click(audio1);
-			Pattern demobtn1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demobtn.png").similar(0.5);
+			/*Pattern demobtn1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demobtn.png").similar(0.5);
 			s21.wait(demobtn1,40000);
 			s21.click(demobtn1);
 			Pattern auto1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-auto.png").similar(0.5);
 			s21.wait(auto1,40000);
-			s21.click(auto1);
+			s21.click(auto1);*/
 			Pattern settings1= new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\settings.png").similar(0.5);
 			s21.wait(settings1,40000);
 			s21.click(settings1);
@@ -200,9 +207,9 @@ public class BuyGames1{
 			Pattern audio3 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
 			s3.wait(audio3,40000);
 			s3.click(audio3);
-			Pattern demobtn3 = new Pattern(absPath+"\\PolandGames\\HP\\demobtn.png").similar(0.5);
+			/*Pattern demobtn3 = new Pattern(absPath+"\\PolandGames\\HP\\demobtn.png").similar(0.5);
 			s3.wait(demobtn3,40000);
-			s3.click(demobtn3);
+			s3.click(demobtn3);*/
 			Thread.sleep(2000);
 			Pattern settings3= new Pattern(absPath+"\\PolandGames\\HP\\settings.png").similar(0.5);
 			s3.wait(settings3,40000);
@@ -224,58 +231,60 @@ public class BuyGames1{
 	@Test()
 	  public void Diamond() throws InterruptedException, FindFailed {
 			  
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click(); //Click on the game display
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\diamond\\image1.png");
-//			  screen.wait(diamond,40000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[7]/img")).click();// Click on the image
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\diamond\\demo2.png").similar(0.6);
-			  screen.wait(demo,40000); 
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\diamond\\volume3.png").similar(0.6);
-			  screen.wait(volume,40000);
-			  screen.click(volume);
-			  
-			  Pattern ok = new Pattern(absPath+"\\PolandGames\\diamond\\ok4.png").similar(0.6);
-			  screen.wait(ok,40000);
-			  screen.click(ok);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\diamond\\demo5.png").similar(0.6);
-			  screen.wait(demo1,40000);
-			  screen.click(demo1);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\diamond\\auto6,11.png").similar(0.6);
-			  screen.wait(auto,40000);
-			  screen.click(auto);
-			  Thread.sleep(5000);
-			  
-			  Pattern moneyplay = new Pattern(absPath+"\\PolandGames\\diamond\\moneyplay8.png").similar(0.6);
-			  screen.wait(moneyplay,4000);
-			  screen.click(moneyplay);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\diamond\\home7.png").similar(0.6);
-			  screen.wait(home,40000);
-			  screen.click(home);
-			  
-			  js.executeScript("window.scrollBy(0,0)", "");
-	  }
-	 @Test()
-	  public void Egypt() throws FindFailed, InterruptedException {
-		  Thread.sleep(5000);
+		Thread.sleep(5000);
 		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 		  Thread.sleep(5000);
 		  
 		  Screen screen = new Screen();
-//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\Egypt\\image1.png");
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\diamond\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[7]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,500)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\diamond\\demo2.png");
+		  screen.wait(demo,5000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\diamond\\volume3.png");
+		  screen.wait(volume,40000);
+		  screen.click(volume);
+		  
+		  Pattern ok = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\diamond\\ok4.png");
+		  screen.wait(ok,5000);
+		  screen.click(ok);
+		  
+		  Pattern switch8 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\diamond\\switch8.png");
+		  screen.wait(switch8,5000);
+		  screen.click(switch8);
+		  
+		  Pattern realPlay = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\diamond\\realPlay6.png");
+		  screen.wait(realPlay,40000);
+		  screen.click(realPlay);
+		  
+		  Pattern auto = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\diamond\\auto7.png");
+		  screen.wait(auto,40000);
+		  screen.click(auto);
+		  Thread.sleep(10000);
+		  
+		  Pattern realPlay1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\diamond\\realPlay7.png");
+		  screen.wait(realPlay1,40000);
+		  
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\diamond\\home8.png");
+		  screen.wait(home,40000);
+		  screen.click(home);
+	  }
+	 @Test()
+	  public void Egypt() throws FindFailed, InterruptedException {
+		 Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\image1.png");
 //		  screen.wait(diamond,40000);
 //		  screen.click(diamond);
 		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[12]/img")).click();
@@ -284,636 +293,770 @@ public class BuyGames1{
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("window.scrollBy(0,600)", "");
 		  
-		  Pattern demo = new Pattern(absPath+"\\PolandGames\\Egypt\\demo2.png").similar(0.6);
-		  screen.wait(demo,40000); 
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\demo2.png");
+		  screen.wait(demo,40000);
 		  screen.click(demo);
 		  
-		  Pattern volume = new Pattern(absPath+"\\PolandGames\\Egypt\\sound3.png").similar(0.6);
-		  screen.wait(volume,40000);
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\sound3.png");
+		  screen.wait(volume,5000);
+		  Thread.sleep(2000);
 		  screen.click(volume);
 		  
-		  Pattern ok = new Pattern(absPath+"\\PolandGames\\Egypt\\ok4.png").similar(0.6);
-		  screen.wait(ok,40000);
+		  Pattern ok = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\ok4.png");
+		  screen.wait(ok,5000);
 		  screen.click(ok);
 		  
-		  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\Egypt\\demo5.png").similar(0.6);
-		  screen.wait(demo1,40000);
-		  screen.click(demo1);
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
 		  
-		  Pattern auto = new Pattern(absPath+"\\PolandGames\\Egypt\\auto6.png").similar(0.6);
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\ok4.png");
+		  screen.wait(ok,5000);
+		  screen.click(ok1);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\place7.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  Thread.sleep(3000);
+		  
+		  Pattern auto = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\auto8.png");
 		  screen.wait(auto,40000);
 		  screen.click(auto);
 		  Thread.sleep(3000);
 		  
-		  Pattern tryAgain = new Pattern(absPath+"\\PolandGames\\Egypt\\demo7.png").similar(0.6);
-		  screen.wait(tryAgain,40000);
-		  Thread.sleep(15000);
 		  
-		  Pattern home = new Pattern(absPath+"\\PolandGames\\Egypt\\home8.png").similar(0.6);
-		  screen.wait(home,40000);
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\place9.png");
+		  screen.wait(play2,5000);
+
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Egypt\\home10.png");
+		  screen.wait(home,5000);
 		  screen.click(home);
 		  
 		  js.executeScript("window.scrollBy(0,0)", "");
 	}
 	  @Test()
 	  public void goldRush() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\goldRush\\image1.png");
-//			  screen.wait(diamond,40000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[5]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\goldRush\\demo2.png").similar(0.6);
-			  screen.wait(demo,40000); 
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\goldRush\\sound3.png").similar(0.6);
-			  screen.wait(volume,5000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern ok = new Pattern(absPath+"\\PolandGames\\goldRush\\ok4.png").similar(0.6);
-			  screen.wait(ok,5000);
-			  screen.click(ok);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\goldRush\\demo5.png").similar(0.6);
-			  screen.wait(demo1,5000);
-			  screen.click(demo1);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\goldRush\\auto6.png").similar(0.6);
-			  screen.wait(auto,5000);
-			  screen.click(auto);
-			  Thread.sleep(5000);
-			  
-			  Pattern tryAgain = new Pattern(absPath+"\\PolandGames\\goldRush\\demo7.png").similar(0.6);
-			  screen.wait(tryAgain,40000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\goldRush\\home8.png").similar(0.6);
-			  screen.wait(home,5000);
-			  screen.click(home);
-			  
-			  js.executeScript("window.scrollBy(0,0)", "");
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[5]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\demo2.png");
+		  screen.wait(demo,40000); 
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\sound3.png");
+		  screen.wait(volume,5000);
+		  Thread.sleep(2000);
+		  screen.click(volume);
+		  
+		  Pattern ok = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\ok4.png");
+		  screen.wait(ok,5000);
+		  screen.click(ok);
+		  
+		  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\switch5.png");
+		  screen.wait(demo1,5000);
+		  screen.click(demo1);
+		  Thread.sleep(7000);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\place7.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  
+		  Pattern auto3 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\auto8.png");
+		  screen.wait(auto3,5000);
+		  screen.click(auto3);
+		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\place9.png");
+		  screen.wait(play2,5000);
+		  Thread.sleep(15000);
+		  
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\goldRush\\home8.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
+	      js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  @Test()
 	  public void Card5() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,200)", "");
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\5card\\image1.png");
-//			  screen.wait(diamond,5000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[8]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\5card\\demo2.png").similar(0.6);
-			  screen.wait(demo,40000); 
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\5card\\sound3.png").similar(0.6);
-			  screen.wait(volume,5000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern ok = new Pattern(absPath+"\\PolandGames\\5card\\ok4.png").similar(0.6);
-			  screen.wait(ok,5000);
-			  screen.click(ok);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\5card\\demo5.png").similar(0.6);
-			  screen.wait(demo1,5000);
-			  screen.click(demo1);
-			  Thread.sleep(3000);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\5card\\auto6.png").similar(0.6);
-			  screen.wait(auto,5000);
-			  screen.click(auto);
-			  Thread.sleep(5000);
-			  
-			  Pattern tryAgain = new Pattern(absPath+"\\PolandGames\\5card\\demo7.png").similar(0.6);
-			  screen.wait(tryAgain,40000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\5card\\home8.png").similar(0.6);
-			  screen.wait(home,5000);
-			  screen.click(home);
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\5card\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[8]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\5card\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\5card\\sound3.png");
+		  screen.wait(volume,5000);
+		  Thread.sleep(2000);
+		  screen.click(volume);
+		  
+		  Pattern ok = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\5card\\ok4.png");
+		  screen.wait(ok,5000);
+		  screen.click(ok);
+		  
+		  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\5card\\switch5.png");
+		  screen.wait(demo1,5000);
+		  screen.click(demo1);
+		  Thread.sleep(7000);
+		  
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\5card\\ok4.png");
+		  screen.wait(ok1,5000);
+		  screen.click(ok1);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\5card\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\5card\\place7.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  
+		  Pattern auto3 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\5card\\auto8.png");
+		  screen.wait(auto3,5000);
+		  screen.click(auto3);
+		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\5card\\place9.png");
+		  screen.wait(play2,5000);
+		  
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\5card\\home10.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  @Test()
 	  public void Bombki() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\Christmas balls\\image1.png").similar(0.6);
-			  screen.wait(diamond,5000);
-			  screen.click(diamond);
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\Christmas balls\\demo2.png").similar(0.6);
-			  screen.wait(demo,40000); 
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\Christmas balls\\sound3.png").similar(0.6);
-			  screen.wait(volume,5000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern ok = new Pattern(absPath+"\\PolandGames\\Christmas balls\\ok4.png").similar(0.6);
-			  screen.wait(ok,40000); 
-			  screen.click(ok);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\Christmas balls\\demo5.png").similar(0.6);
-			  screen.wait(demo1,5000);
-			  screen.click(demo1);
-			  Thread.sleep(3000);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\Christmas balls\\auto6.png").similar(0.6);
-			  screen.wait(auto,5000);
-			  screen.click(auto);
-			  Thread.sleep(5000);
-			  
-			  Pattern tryAgain = new Pattern(absPath+"\\PolandGames\\Christmas balls\\demo7.png").similar(0.6);
-			  screen.wait(tryAgain,40000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\Christmas balls\\home8.png").similar(0.6);
-			  screen.wait(home,5000);
-			  screen.click(home);
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[9]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\sound3.png");
+		  screen.wait(volume,5000);
+		  Thread.sleep(2000);
+		  screen.click(volume);
+		  
+		  Pattern ok = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\ok4.png");
+		  screen.wait(ok,5000);
+		  screen.click(ok);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\place7.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  Thread.sleep(3000);
+		  
+		  Pattern auto3 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\auto8.png");
+		  screen.wait(auto3,5000);
+		  screen.click(auto3);
+		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\place9.png");
+		  screen.wait(play2,5000);
+		  
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Christmas balls\\home10.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  
 	  @Test()
 	  public void Cyferki() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\Cyferki\\image1.png");
-//			  screen.wait(diamond,5000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[10]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\Cyferki\\demo2.png").similar(0.6);
-			  screen.wait(demo,5000); 
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\Cyferki\\sound3.png").similar(0.6);
-			  screen.wait(volume,40000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern ok = new Pattern(absPath+"\\PolandGames\\Cyferki\\ok4.png").similar(0.6);
-			  screen.wait(ok,5000);
-			  screen.click(ok);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\Cyferki\\demo5.png").similar(0.6);
-			  screen.wait(demo1,5000);
-			  screen.click(demo1);
-			  Thread.sleep(3000);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\Cyferki\\try6.png").similar(0.6);
-			  screen.wait(auto,40000);
-			  screen.click(auto);
-			  Thread.sleep(5000);
-			  
-			  Pattern start = new Pattern(absPath+"\\PolandGames\\Cyferki\\start7.png").similar(0.6);
-			  screen.wait(start,40000);
-			  screen.click(start);
-			  Thread.sleep(3000);
-			  
-			  Pattern tryAgain = new Pattern(absPath+"\\PolandGames\\Cyferki\\try8.png").similar(0.6);
-			  screen.wait(tryAgain,40000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\Cyferki\\home9.png").similar(0.6);
-			  screen.wait(home,40000);
-			  screen.click(home);
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[10]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\sound3.png");
+		  screen.wait(volume,5000);
+		  Thread.sleep(2000);
+		  screen.click(volume);
+		  
+		  Pattern ok = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\ok4.png");
+		  screen.wait(ok,5000);
+		  screen.click(ok);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\ok4.png");
+		  screen.wait(ok1,5000);
+		  screen.click(ok1);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\place7.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  Thread.sleep(3000);
+		  
+		  Pattern play1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\place8.png");
+		  screen.wait(play1,40000);
+		  screen.click(play1);
+		  Thread.sleep(3000);
+		  
+		  Pattern start = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\start9.png");
+		  screen.wait(start,40000);
+		  screen.click(start);
+		  Thread.sleep(3000);
+		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\place10.png");
+		  screen.wait(play2,5000);
+
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Cyferki\\home11.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  
 	  @Test()
 	  public void Antyki() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\Antyki\\image1.png");
-//			  screen.wait(diamond,40000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[11]/img")).click();
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Antyki\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[11]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Antyki\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Antyki\\sound3.png");
+		  screen.wait(volume,5000);
+		  Thread.sleep(2000);
+		  screen.click(volume);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Antyki\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Antyki\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Antyki\\place8.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  Thread.sleep(3000);
+		  
+		  Pattern auto = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Antyki\\auto9.png");
+		  screen.wait(auto,40000);
+		  screen.click(auto);
+		  Thread.sleep(3000);
+		  
+		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Antyki\\place10.png");
+		  screen.wait(play2,5000);
 
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\Antyki\\demo2.png").similar(0.6);
-			  screen.wait(demo,5000);
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\Antyki\\sound3.png").similar(0.6);
-			  screen.wait(volume,5000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\Antyki\\demo4.png").similar(0.6);
-			  screen.wait(demo1,5000);
-			  screen.click(demo1);
-			  Thread.sleep(3000);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\Antyki\\auto5.png").similar(0.6);
-			  screen.wait(auto,5000);
-			  screen.click(auto);
-			  Thread.sleep(5000);
-			  
-			  Pattern demo2 = new Pattern(absPath+"\\PolandGames\\Antyki\\demo6.png").similar(0.6);
-			  screen.wait(demo2,40000);
-			  Thread.sleep(3000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\Antyki\\home7.png").similar(0.6);
-			  screen.wait(home,5000);
-			  screen.click(home);
-			  
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Antyki\\home11.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  @Test()
 	  public void Duszki() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\Duszki\\image1.png");
-//			  screen.wait(diamond,5000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[13]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\Duszki\\demo2.png").similar(0.6);
-			  screen.wait(demo,40000);
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\Duszki\\sound3.png").similar(0.6);
-			  screen.wait(volume,40000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern ok = new Pattern(absPath+"\\PolandGames\\Duszki\\ok4.png").similar(0.6);
-			  screen.wait(ok,40000);
-			  screen.click(ok);
-			  Thread.sleep(3000);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\Duszki\\demo5.png").similar(0.5);
-			  screen.wait(demo1,40000);
-			  screen.click(demo1);
-			  Thread.sleep(5000);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\Duszki\\auto6.png").similar(0.6);
-			  screen.wait(auto,40000);
-			  Thread.sleep(3000);
-			  screen.click();
-			  
-			  Pattern demo2 = new Pattern(absPath+"\\PolandGames\\Duszki\\demo7.png").similar(0.5);
-			  screen.wait(demo2,40000);
-			  Thread.sleep(3000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\Duszki\\home8.png").similar(0.6);
-			  screen.wait(home,40000);
-			  screen.click(home);
-			  
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[13]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\sound3.png");
+		  screen.wait(volume,5000);
+		  Thread.sleep(2000);
+		  screen.click(volume);
+		  
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\ok4.png");
+		  screen.wait(ok1,5000);
+		  Thread.sleep(2000);
+		  screen.click(ok1);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\place7.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  Thread.sleep(3000);
+		  
+		  Pattern auto = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\auto8.png");
+		  screen.wait(auto,40000);
+		  screen.click(auto);
+		  		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\place9.png");
+		  screen.wait(play2,5000);
+
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\Duszki\\home10.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  @Test()
 	  public void triplePlatinum() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\TriplePlatinum\\image1.png");
-//			  screen.wait(diamond,5000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[15]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\TriplePlatinum\\demo2.png").similar(0.6);
-			  screen.wait(demo,5000);
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\TriplePlatinum\\sound3.png").similar(0.6);
-			  screen.wait(volume,40000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern ok = new Pattern(absPath+"\\PolandGames\\TriplePlatinum\\ok4.png").similar(0.6);
-			  screen.wait(ok,5000);
-			  screen.click(ok);
-			  Thread.sleep(3000);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\TriplePlatinum\\demo5.png").similar(0.6);
-			  screen.wait(demo1,5000);
-			  screen.click(demo1);
-			  Thread.sleep(5000);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\TriplePlatinum\\auto6.png").similar(0.6);
-			  screen.wait(auto,40000);
-			  Thread.sleep(3000);
-			  screen.click();
-			  
-			  Pattern demo2 = new Pattern(absPath+"\\PolandGames\\TriplePlatinum\\demo7.png").similar(0.6);
-			  screen.wait(demo2,5000);
-			  Thread.sleep(3000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\TriplePlatinum\\home8.png").similar(0.6);
-			  screen.wait(home,5000);
-			  screen.click(home);
-			  
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[15]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\sound3.png");
+		  screen.wait(volume,5000);
+		  Thread.sleep(2000);
+		  screen.click(volume);
+		  
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\ok4.png");
+		  screen.wait(ok1,5000);
+		  Thread.sleep(2000);
+		  screen.click(ok1);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\play7.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  Thread.sleep(3000);
+		  
+		  Pattern auto = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\auto8.png");
+		  screen.wait(auto,40000);
+		  screen.click(auto);
+		  Thread.sleep(3000);
+		  
+		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\play9.png");
+		  screen.wait(play2,5000);
+
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\TriplePlatinum\\home10.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  @Test()
 	  public void Garniec() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\GarniecZÅ‚ota\\image1.png");
-//			  screen.wait(diamond,5000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[14]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\GarniecZÅ‚ota\\demo2.png").similar(0.6);
-			  screen.wait(demo,5000);
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\GarniecZÅ‚ota\\sound3.png").similar(0.6);
-			  screen.wait(volume,40000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern start = new Pattern(absPath+"\\PolandGames\\GarniecZÅ‚ota\\start3.png").similar(0.6);
-			  screen.wait(start,5000);
-			  screen.click(start);
-			  Thread.sleep(3000);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\GarniecZÅ‚ota\\demo4.png").similar(0.6);
-			  screen.wait(demo1,5000);
-			  screen.click(demo1);
-			  Thread.sleep(5000);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\GarniecZÅ‚ota\\auto6.png").similar(0.6);
-			  screen.wait(auto,5000);
-			  Thread.sleep(3000);
-			  screen.click();
-			  
-			  Pattern demo2 = new Pattern(absPath+"\\PolandGames\\GarniecZÅ‚ota\\demo7.png").similar(0.6);
-			  screen.wait(demo2,40000);
-			  Thread.sleep(3000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\GarniecZÅ‚ota\\home8.png").similar(0.6);
-			  screen.wait(home,5000);
-			  screen.click(home);
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[14]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\sound3.png");
+		  screen.wait(volume,5000);
+		  Thread.sleep(2000);
+		  screen.click(volume);
+		  
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\start4.png");
+		  screen.wait(ok1,5000);
+		  Thread.sleep(2000);
+		  screen.click(ok1);
+		  
+		  Pattern setting = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\setting5.png");
+		  screen.wait(setting,40000);
+		  screen.click(setting);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\switch6.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\reduce7.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\place8.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  Thread.sleep(3000);
+		  
+		  Pattern auto = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\auto9.png");
+		  screen.wait(auto,40000);
+		  screen.click(auto);
+		  		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\place10.png");
+		  screen.wait(play2,5000);
+
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\GarniecZÅ‚ota\\home11.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  @Test()
 	  public void btyskothi() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\btyskothi\\image1.png");
-//			  screen.wait(diamond,5000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[16]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\btyskothi\\demo2.png").similar(0.6);
-			  screen.wait(demo,5000);
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\btyskothi\\sound3.png").similar(0.6);
-			  screen.wait(volume,40000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern start = new Pattern(absPath+"\\PolandGames\\btyskothi\\ok4.png").similar(0.6);
-			  screen.wait(start,40000);
-			  screen.click(start);
-			  Thread.sleep(3000);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\btyskothi\\demo5.png").similar(0.6);
-			  screen.wait(demo1,40000);
-			  screen.click(demo1);
-			  Thread.sleep(5000);
-			  
-			  Pattern demo2 = new Pattern(absPath+"\\PolandGames\\btyskothi\\demo7.png").similar(0.6);
-			  screen.wait(demo2,40000);
-			  Thread.sleep(3000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\btyskothi\\home8.png").similar(0.6);
-			  screen.wait(home,40000);
-			  screen.click(home);  
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[16]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\sound3.png");
+		  screen.wait(volume,5000);
+		  screen.click(volume);
+		  
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\ok4.png");
+		  screen.wait(ok1,5000);
+		  Thread.sleep(2000);
+		  screen.click(ok1);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern ok2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\ok4.png");
+		  screen.wait(ok2,5000);
+		  screen.click(ok2);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\place7.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  Thread.sleep(3000);
+		  		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\place8.png");
+		  screen.wait(play2,5000);
+		  Thread.sleep(15000);
+
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\btyskothi\\home9.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  js.executeScript("window.scrollBy(0,0)", "");
 			  }
 	  @Test()
 	  public void gorki() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\gorki\\image1.png");
-//			  screen.wait(diamond,5000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[17]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\gorki\\demo2.png").similar(0.6);
-			  screen.wait(demo,40000);
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\gorki\\sound3.png").similar(0.6);
-			  screen.wait(volume,100000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern start = new Pattern(absPath+"\\PolandGames\\gorki\\ok4.png").similar(0.6);
-			  screen.wait(start,5000);
-			  screen.click(start);
-			  Thread.sleep(3000);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\gorki\\demo5.png").similar(0.6);
-			  screen.wait(demo1,5000);
-			  screen.click(demo1);
-			  Thread.sleep(5000);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\gorki\\option6.png").similar(0.6);
-			  screen.wait(auto,40000);
-			  screen.click(auto);
-			  Thread.sleep(5000);
-			  
-			  Pattern demo2 = new Pattern(absPath+"\\PolandGames\\gorki\\option7.png").similar(0.6);
-			  screen.wait(demo2,40000);
-			  screen.click(demo2);
-			  Thread.sleep(3000);
-			  
-			  Pattern auto1 = new Pattern(absPath+"\\PolandGames\\gorki\\auto8.png").similar(0.6);
-			  screen.wait(auto1,40000);
-			  screen.click(auto1);
-			  Thread.sleep(3000);
-			  
-			  Pattern tryagain = new Pattern(absPath+"\\PolandGames\\gorki\\tryagain9.png").similar(0.6);
-			  screen.wait(tryagain,40000);
-			  Thread.sleep(3000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\gorki\\home10.png").similar(0.6);
-			  screen.wait(home,5000);
-			  screen.click(home);
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,200)", "");
+		  Thread.sleep(2000);
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[17]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\sound3.png");
+		  screen.wait(volume,5000);
+		  screen.click(volume);
+		  
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\ok4.png");
+		  screen.wait(ok1,5000);
+		  Thread.sleep(2000);
+		  screen.click(ok1);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\place7.png");
+		  screen.wait(play,5000);
+		  screen.click(play);
+		  
+		  Pattern option = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\option8.png");
+		  screen.wait(option,5000);
+		  screen.click(option);
+		  
+		  Pattern ok = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\ok9.png");
+		  screen.wait(ok,5000);
+		  screen.click(ok);
+		  		  
+		  Pattern auto = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\auto10.png");
+		  screen.wait(auto,5000);
+		  screen.click(auto);
+		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\place11.png");
+		  screen.wait(play2,5000);
+		  Thread.sleep(3000);
+
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\gorki\\home12.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  @Test()
 	  public void emotki() throws InterruptedException, FindFailed {
-			Thread.sleep(5000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\emotki\\image1.png");
-//			  screen.wait(diamond,5000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[18]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,600)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\emotki\\demo2.png").similar(0.6);
-			  screen.wait(demo,5000);
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\emotki\\sound3.png").similar(0.6);
-			  screen.wait(volume,100000);
-			  Thread.sleep(2000);
-			  screen.click(volume);
-			  
-			  Pattern start = new Pattern(absPath+"\\PolandGames\\emotki\\ok4.png").similar(0.6);
-			  screen.wait(start,5000);
-			  screen.click(start);
-			  Thread.sleep(3000);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\emotki\\demo5.png").similar(0.6);
-			  screen.wait(demo1,5000);
-			  screen.click(demo1);
-			  Thread.sleep(5000);
-			  
-			  Pattern auto1 = new Pattern(absPath+"\\PolandGames\\emotki\\auto6.png").similar(0.6);
-			  screen.wait(auto1,5000);
-			  screen.click(auto1);
-			  Thread.sleep(3000);
-			  
-			  Pattern tryagain = new Pattern(absPath+"\\PolandGames\\emotki\\tryagain7.png").similar(0.6);
-			  screen.wait(tryagain,40000);
-			  Thread.sleep(3000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\emotki\\home8.png").similar(0.6);
-			  screen.wait(home,5000);
-			  screen.click(home);
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,200)", "");
+		  Thread.sleep(2000);
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[18]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\sound3.png");
+		  screen.wait(volume,5000);
+		  screen.click(volume);
+		  
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\ok4.png");
+		  screen.wait(ok1,5000);
+		  Thread.sleep(2000);
+		  screen.click(ok1);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\place7.png");
+		  screen.wait(play,5000);
+		  screen.click(play);
+		  		  
+		  Pattern auto = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\auto8.png");
+		  screen.wait(auto,40000);
+		  screen.click(auto);
+		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\place9.png");
+		  screen.wait(play2,5000);
+		  Thread.sleep(3000);
+
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\emotki\\home10.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  @Test()
-	  public void redPepperHot() throws InterruptedException, FindFailed {
-			Thread.sleep(2000);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
-			  
-			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,300)", "");
-			  
-			  Screen screen = new Screen();
-//			  Pattern diamond = new Pattern(absPath+"\\PolandGames\\hotPepperPayout\\image1.png");
-//			  screen.wait(diamond,5000);
-//			  screen.click(diamond);
-			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[20]/img")).click();
-			  
-			  Thread.sleep(15000);
-			  //JavascriptExecutor js1 = (JavascriptExecutor) driver;
-			  js.executeScript("window.scrollBy(0,200)", "");
-			  
-			  Pattern demo = new Pattern(absPath+"\\PolandGames\\hotPepperPayout\\demo2.png").similar(0.6);
-			  screen.wait(demo,5000);
-			  screen.click(demo);
-			  
-			  Pattern volume = new Pattern(absPath+"\\PolandGames\\hotPepperPayout\\sound3.png").similar(0.6);
-			  screen.wait(volume,40000);
-			  screen.click(volume);
-			  
-			  Pattern start = new Pattern(absPath+"\\PolandGames\\hotPepperPayout\\ok4.png").similar(0.6);
-			  screen.wait(start,40000);
-			  screen.click(start);
-			  Thread.sleep(3000);
-			  
-			  Pattern demo1 = new Pattern(absPath+"\\PolandGames\\hotPepperPayout\\demo5.png").similar(0.6);
-			  screen.wait(demo1,40000);
-			  screen.click(demo1);
-			  Thread.sleep(5000);
-			  
-			  Pattern auto = new Pattern(absPath+"\\PolandGames\\hotPepperPayout\\auto6.png").similar(0.6);
-			  screen.wait(auto,5000);
-			  screen.click(auto);
-			  Thread.sleep(5000);
-			  
-			  Pattern demo2 = new Pattern(absPath+"\\PolandGames\\hotPepperPayout\\demo7.png").similar(0.6);
-			  screen.wait(demo2,40000);
-			  Thread.sleep(3000);
-			  
-			  Pattern home = new Pattern(absPath+"\\PolandGames\\hotPepperPayout\\home8.png").similar(0.6);
-			  screen.wait(home,5000);
-			  screen.click(home);
+	  public void Hotpepperpayout() throws InterruptedException, FindFailed {
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		  Thread.sleep(5000);
+		  
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,200)", "");
+		  
+		  Screen screen = new Screen();
+//		  Pattern diamond = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\image1.png");
+//		  screen.wait(diamond,40000);
+//		  screen.click(diamond);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[20]/img")).click();
+		  
+		  Thread.sleep(15000);
+		  js.executeScript("window.scrollBy(0,600)", "");
+		  
+		  Pattern demo = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\demo2.png");
+		  screen.wait(demo,40000);
+		  screen.click(demo);
+		  
+		  Pattern volume = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\sound3.png");
+		  screen.wait(volume,5000);
+		  screen.click(volume);
+		  
+		  Pattern ok1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\ok4.png");
+		  screen.wait(ok1,5000);
+		  Thread.sleep(2000);
+		  screen.click(ok1);
+		  
+		  Pattern switch1 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\switch5.png");
+		  screen.wait(switch1,5000);
+		  screen.click(switch1);
+		  Thread.sleep(3000);
+		  
+		  Pattern reduce = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\reduce6.png");
+		  screen.wait(reduce,5000);
+		  screen.click(reduce);
+		  Thread.sleep(3000);
+		  
+		  Pattern play = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\place7.png");
+		  screen.wait(play,40000);
+		  screen.click(play);
+		  Thread.sleep(3000);
+		  		  
+		  Pattern auto = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\auto8.png");
+		  screen.wait(auto,5000);
+		  screen.click(auto);
+		  
+		  Pattern play2 = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\place9.png");
+		  screen.wait(play2,5000);
+		  Thread.sleep(15000);
+
+		  Pattern home = new Pattern(absPath+"\\PolandGames\\zbuyGmaes\\hotPepperPayout\\home10.png");
+		  screen.wait(home,5000);
+		  screen.click(home);
 			  js.executeScript("window.scrollBy(0,0)", "");
 	  }
 	  @Test
-		//1
+		
 		 public void Kurki () throws InterruptedException, FindFailed {
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -922,21 +1065,18 @@ public class BuyGames1{
 			 
 			  Screen s3 = new Screen();
 			  js.executeScript("window. scrollBy(500,500)");
-			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\Kurki-fp.png").similar(0.6);
+			  Pattern frontpage = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.6);
 			  s3.wait(frontpage,1000);
-			  s3.click(frontpage,1000);
-			
-			   Thread.sleep(5000);
-			   js.executeScript("window. scrollBy(0,600)");
-			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\Kurki-demo.png").similar(0.6);
-			  s3.wait(demo3,1000);
-			  s3.click(demo3);
+			  s3.click(frontpage,1000);		 
 			  Pattern audio3 = new Pattern(absPath+"\\Polandlottery\\Kurki-audio.png").similar(0.6);
 			  s3.wait(audio3,1000);
 			  s3.doubleClick(audio3);
 			  Pattern ok3 = new Pattern(absPath+"\\Polandlottery\\Kurki-ok.png").similar(0.6);
 			  s3.wait(ok3,1000);
 			  s3.click(ok3);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\Kurki-mtm.png").similar(0.6);
+			  s3.wait(mtm,1000);
+			  s3.click(mtm);
 			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\Kurki-increase.png").similar(0.6);
 			  s3.wait(increase3 ,1000);
 			  s3.click(increase3);
@@ -953,7 +1093,7 @@ public class BuyGames1{
 			  js.executeScript("window.scrollBy(0,0)", "");
 		}
 	  @Test()
-		//2
+		
 	 public void Totemki () throws InterruptedException, FindFailed {
 			Thread.sleep(5000);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -992,7 +1132,7 @@ public class BuyGames1{
 			  js.executeScript("window.scrollBy(0,0)", "");
 	 }
 		@Test
-		//3
+		
 		 public void Skrzynki  () throws InterruptedException, FindFailed {
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("/html/body/div/div/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -1030,7 +1170,7 @@ public class BuyGames1{
 			  js.executeScript("window.scrollBy(0,0)", "");
 		 }
 		@Test
-		//4
+		
 		 public void Kamyki() throws InterruptedException, FindFailed {
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -1069,7 +1209,7 @@ public class BuyGames1{
 		 
 		 	 }
 		@Test
-		//5
+		
 		 
 		 public void Siódemki() throws InterruptedException, FindFailed {
 			 Thread.sleep(5000);
@@ -1108,7 +1248,7 @@ public class BuyGames1{
 			 
 		}
 		@Test
-		//6
+		
 		 public void gp () throws InterruptedException, FindFailed {
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -1146,7 +1286,7 @@ public class BuyGames1{
 			 
 		}
 		@Test
-		//7
+		
 		 public void Owocki() throws InterruptedException, FindFailed {
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -1184,7 +1324,7 @@ public class BuyGames1{
 			 
 		}
 		@Test
-		//8
+		
 		 public void Gwiazdki () throws InterruptedException, FindFailed {
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -1222,7 +1362,7 @@ public class BuyGames1{
 			 
 		}
 		@Test
-		//9
+		
 		 public void krzyowki() throws InterruptedException, FindFailed {
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -1260,7 +1400,7 @@ public class BuyGames1{
 			 
 		}
 		@Test
-		//10
+		
 		 public void monetki () throws InterruptedException, FindFailed {
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
@@ -1297,7 +1437,7 @@ public class BuyGames1{
 			  js.executeScript("window.scrollBy(0,0)", "");
 		}
 		@Test
-		//11
+		
 		 public void znaczki () throws InterruptedException, FindFailed {
 			driver.quit();  
 			WebDriverManager.edgedriver().setup();

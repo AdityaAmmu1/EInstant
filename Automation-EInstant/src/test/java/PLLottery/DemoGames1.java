@@ -130,6 +130,8 @@ public class DemoGames1{
 		s21.wait(auto1,40000);
 		s21.click(auto1);
 		Thread.sleep(2000);
+		Pattern demobtn2 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demobtn.png").similar(0.5);
+		s21.wait(demobtn2,40000);
 		s21.click(absPath+"\\home.png");
 		Thread.sleep(4000);
 		js.executeScript("window.scrollBy(1000,0)");		
