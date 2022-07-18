@@ -48,7 +48,7 @@ public class DemoGames1{
 		}
 	 @Test
 	 public void ss() throws InterruptedException, FindFailed {
-		 driver.findElement(By.xpath("//*[@id=\\\"__layout\\\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 		 Thread.sleep(5000);
 		 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[2]")).click();
 		 Thread.sleep(15000);
@@ -67,6 +67,9 @@ public class DemoGames1{
 		Pattern demobtn = new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\demobtn.png").similar(0.5);
 		s.wait(demobtn,40000);
 		s.click(demobtn);
+		Pattern Auto = new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\GF-Auto.png").similar(0.5);
+		s.wait(Auto,40000);
+		s.click(Auto);
 		Thread.sleep(2000);
 		s.click(absPath+"\\PolandGames\\home.png");
 		Thread.sleep(4000);
@@ -97,6 +100,8 @@ public class DemoGames1{
 		Pattern auto = new Pattern(absPath+"\\PolandGames\\Słówka\\auto.png").similar(0.5);
 		s.wait(auto,40000);
 		s.click(auto);
+		Pattern demo1 = new Pattern(absPath+"\\PolandGames\\Słówka\\demobtn.png").similar(0.5);
+		s.wait(demo1,40000);
 		Thread.sleep(1000);
 		s.click(absPath+"\\PolandGames\\home.png");
 		Thread.sleep(4000);
@@ -129,9 +134,10 @@ public class DemoGames1{
 		Pattern auto1 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-auto.png").similar(0.5);
 		s21.wait(auto1,40000);
 		s21.click(auto1);
-		Thread.sleep(2000);
-		Pattern demobtn2 = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demobtn.png").similar(0.5);
-		s21.wait(demobtn2,40000);
+		Pattern demobtn= new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\demobtn.png").similar(0.5);
+		s21.wait(demobtn,40000);
+		s21.click(demobtn);
+		Thread.sleep(3000);
 		s21.click(absPath+"\\home.png");
 		Thread.sleep(4000);
 		js.executeScript("window.scrollBy(1000,0)");		
@@ -160,6 +166,9 @@ public class DemoGames1{
 		s3.wait(demobtn3,40000);
 		s3.click(demobtn3);
 		Thread.sleep(2000);
+		Pattern demobtn4 = new Pattern(absPath+"\\PolandGames\\HP\\demobtn.png").similar(0.9);
+		s3.wait(demobtn4,40000);
+		Thread.sleep(7000);
 		s3.click(absPath+"\\PolandGames\\home.png");
 		Thread.sleep(4000);
 		js.executeScript("window.scrollBy(1000,0)");	
@@ -889,7 +898,9 @@ public class DemoGames1{
 			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\Kurki-autobtn.png").similar(0.6);
 			  s3.wait(ra3,1000);
 			  s3.doubleClick(ra3);
-			  Thread.sleep(5000);
+			  Pattern ra2 = new Pattern(absPath+"\\Polandlottery\\Kurki-end.png").similar(0.6);
+			  s3.wait(ra2,1000);
+			  s3.doubleClick(ra2);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,1000);
 			  s3.click(home3);
@@ -1038,17 +1049,19 @@ public class DemoGames1{
 			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\Siodemki-increase.png").similar(0.6);
 			  s3.wait(increase3 ,1000);
 			  s3.click(increase3);
-			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Siodemki-demobutton.png").similar(0.6);
-			  s3.wait(t3,1000);
+			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Siodemki-demobtn.png").similar(0.6);
+			  s3.wait(t3 ,1000);
 			  s3.click(t3);
 			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\Siodemki-autobtn.png").similar(0.6);
 			  s3.wait(ra3,1000);
 			  s3.doubleClick(ra3);
+			  Thread.sleep(15000);
+			  Pattern t4 = new Pattern(absPath+"\\Polandlottery\\PolandlotteryNewImages\\siodemki-end.png").similar(0.6);
+			  s3.wait(t4 ,1000);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,1000);
 			  s3.click(home3);
 			  js.executeScript("window.scrollBy(0,0)", "");
-			 
 		}
 		@Test
 		//6
@@ -1085,8 +1098,7 @@ public class DemoGames1{
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,1000);
 			  s3.click(home3);
-			  js.executeScript("window.scrollBy(0,0)", "");
-			 
+			  js.executeScript("window.scrollBy(0,0)", "");			 
 		}
 		@Test
 		//7
@@ -1100,12 +1112,14 @@ public class DemoGames1{
 			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\Owocki-fp.png").similar(0.6);
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
-		js.executeScript("window. scrollBy(0,600)");
+			  Thread.sleep(15000);
+		js.executeScript("window. scrollBy(0,500)");
 			   Thread.sleep(5000);
 			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\Owocki-demo.png").similar(0.6);
 			  s3.wait(demo3,10000);
 			  s3.click(demo3);
-			  Pattern audio3 = new Pattern(absPath+"\\Polandlottery\\Owocki-audio.png").similar(0.6);
+			  Thread.sleep(10000);
+			  Pattern audio3 = new Pattern(absPath+"\\Polandlottery\\Owocki-audio.png").similar(0.9);
 			  s3.wait(audio3,10000);
 			  s3.doubleClick(audio3);
 			  Pattern ok3 = new Pattern(absPath+"\\Polandlottery\\Owocki-ok.png").similar(0.6);
@@ -1117,9 +1131,22 @@ public class DemoGames1{
 			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Owocki-demobtn.png").similar(0.6);
 			  s3.wait(t3,10000);
 			  s3.click(t3);
+			  Thread.sleep(3000);
 			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\Owocki-autobtn.png").similar(0.6);
 			  s3.wait(ra3,10000);
 			  s3.doubleClick(ra3);
+			  Pattern t4 = new Pattern(absPath+"\\Polandlottery\\PolandlotteryNewImages\\ow-end.png").similar(0.6);
+			  s3.wait(t4,10000);
+			  s3.click(t4);
+			  Thread.sleep(2000);
+			  Pattern t5 = new Pattern(absPath+"\\Polandlottery\\PolandlotteryNewImages\\ow-end2.png").similar(0.6);
+			  s3.wait(t5,20000);
+			  s3.click(t5);
+			  Thread.sleep(2000);
+			  Pattern t6 = new Pattern(absPath+"\\Polandlottery\\PolandlotteryNewImages\\ow-end3.png").similar(0.6);
+			  s3.wait(t6,20000);
+			  s3.click(t6);
+			  Thread.sleep(2000);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,10000);
 			  s3.click(home3);
