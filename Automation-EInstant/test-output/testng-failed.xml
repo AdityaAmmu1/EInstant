@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PLLottery.buyexample">
+      <class name="PLLottery.DemoGames1">
         <methods>
+          <include name="Owocki"/>
           <include name="beforeMethod"/>
-          <include name="ss"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- PLLottery.buyexample -->
+      </class> <!-- PLLottery.DemoGames1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
