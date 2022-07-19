@@ -1058,9 +1058,11 @@ public class BuyGames1{
 	  @Test
 		
 		 public void Kurki () throws InterruptedException, FindFailed {
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			 Thread.sleep(5000);
+			 Thread.sleep(15000);
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			 
 			  Screen s3 = new Screen();
@@ -1080,13 +1082,14 @@ public class BuyGames1{
 			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\Kurki-increase.png").similar(0.6);
 			  s3.wait(increase3 ,1000);
 			  s3.click(increase3);
-			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Kurki-demobtn.png").similar(0.6);
+			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Kurki-buy.png").similar(0.6);
 			  s3.wait(t3,1000);
 			  s3.click(t3);
 			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\Kurki-autobtn.png").similar(0.6);
 			  s3.wait(ra3,1000);
 			  s3.doubleClick(ra3);
 			  Thread.sleep(5000);
+			  s3.wait(t3,1000);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,1000);
 			  s3.click(home3);
@@ -1095,9 +1098,11 @@ public class BuyGames1{
 	  @Test()
 		
 	 public void Totemki () throws InterruptedException, FindFailed {
+		  Thread.sleep(5000);
+		  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 			Thread.sleep(5000);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
+			  Thread.sleep(15000);
 			 // driver.findElement(By.xpath("//*[@alt=\"Totemki\"]")).click();
 			 // Thread.sleep(1000);
 			  Screen s = new Screen();
@@ -1109,7 +1114,7 @@ public class BuyGames1{
 			  Thread.sleep(5000);
 			  js.executeScript("window. scrollBy(0,600)");
 			  Pattern demo = new Pattern(absPath+"\\Polandlottery\\Tot-demo.png").similar(0.6);
-			  		  s.wait(demo,1000);
+			   s.wait(demo,1000);
 			  s.click(demo);
 			  Pattern audio = new Pattern(absPath+"\\Polandlottery\\Tot-try-Audio.png").similar(0.6);
 			  s.wait(audio,1000);
@@ -1120,12 +1125,13 @@ public class BuyGames1{
 			  Pattern increase = new Pattern(absPath+"\\Polandlottery\\Tot-increase.png").similar(0.6);
 			  s.wait(increase ,1000);
 			  s.click(increase);
-			  Pattern t = new Pattern(absPath+"\\Polandlottery\\Tot-demobutton.png").similar(0.6);
+			  Pattern t = new Pattern(absPath+"\\Polandlottery\\Tot-buy.png").similar(0.6);
 			  s.wait(t,1000);
 			  s.click(t);
 			  Pattern ra = new Pattern(absPath+"\\Polandlottery\\Tot-try-revealall.png").similar(0.6);
 			  s.wait(ra,5000);
 			  s.click(ra);
+			  s.wait(t,1000);
 			  Pattern home = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s.wait(home,5000);
 			  s.click(home);
@@ -1134,9 +1140,11 @@ public class BuyGames1{
 		@Test
 		
 		 public void Skrzynki  () throws InterruptedException, FindFailed {
+			Thread.sleep(5000);
+			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("/html/body/div/div/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			  Thread.sleep(5000);
+			  Thread.sleep(15000);
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  Screen s1 = new Screen();
 			  js.executeScript("window. scrollBy(500,500)");
@@ -1144,7 +1152,7 @@ public class BuyGames1{
 			  s1.wait(fp,30000);
 			  s1.click(fp);
 			  Thread.sleep(5000);
-			  		  js.executeScript("window. scrollBy(0,600)");
+			 js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
 			  Pattern demo1 = new Pattern(absPath+"\\Polandlottery\\Skrzynki-demo.png").similar(0.6);
 			  s1.wait(demo1,1000);
@@ -1158,12 +1166,16 @@ public class BuyGames1{
 			  Pattern increase1 = new Pattern(absPath+"\\Polandlottery\\Skrzynki-increase.png").similar(0.6);
 			  s1.wait(increase1 ,1000);
 			  s1.click(increase1);
-			  Pattern t1 = new Pattern(absPath+"\\Polandlottery\\Skrzynki-demobtn.png").similar(0.6);
-			  s1.wait(t1,1000);
-			  s1.click(t1);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\skrzunki-movetomoney.png").similar(0.6);
+			  s1.wait(mtm,1000);
+			  s1.click(mtm);
+			  Pattern buy = new Pattern(absPath+"\\Polandlottery\\skrzynki-buy.png").similar(0.6);
+			  s1.wait(buy,1000);
+			  s1.click(buy);
 			  Pattern ra1 = new Pattern(absPath+"\\Polandlottery\\Skrzynki-autoreveal.png").similar(0.6);
 			  s1.wait(ra1,1000);
 			  s1.doubleClick(ra1);
+			  s1.wait(buy,1000);
 			  Pattern home1 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s1.wait(home1,1000);
 			  s1.click(home1);
@@ -1172,9 +1184,11 @@ public class BuyGames1{
 		@Test
 		
 		 public void Kamyki() throws InterruptedException, FindFailed {
+			Thread.sleep(5000);
+			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			 Thread.sleep(5000);
+			 Thread.sleep(15000);
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s2 = new Screen();
@@ -1183,7 +1197,6 @@ public class BuyGames1{
 			  s2.click(fp);
 			  Thread.sleep(5000);
 			  js.executeScript("window. scrollBy(0,600)");
-			   
 			  Pattern demo2 = new Pattern(absPath+"\\Polandlottery\\kamyki-demo.png").similar(0.6);
 			  s2.wait(demo2,1000);
 			  s2.click(demo2);
@@ -1196,12 +1209,16 @@ public class BuyGames1{
 			  Pattern increase2 = new Pattern(absPath+"\\Polandlottery\\kamyki-increase.png").similar(0.6);
 			  s2.wait(increase2 ,1000);
 			  s2.click(increase2);
-			  Pattern t2 = new Pattern(absPath+"\\Polandlottery\\kamyki-demobtn.png").similar(0.6);
-			  s2.wait(t2,1000);
-			  s2.click(t2);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\kamyki-mtm.png").similar(0.6);
+			  s2.wait(mtm,1000);
+			  s2.click(mtm);
+			  Pattern buy = new Pattern(absPath+"\\Polandlottery\\kamyki-buy.png").similar(0.6);
+			  s2.wait(buy,1000);
+			  s2.click(buy);
 			  Pattern ra2 = new Pattern(absPath+"\\Polandlottery\\kamyki-demoauto.png").similar(0.6);
 			  s2.wait(ra2,1000);
 			  s2.doubleClick(ra2);
+			  s2.wait(buy,1000);
 			  Pattern home2 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s2.wait(home2,1000);
 			  s2.click(home2);
@@ -1212,9 +1229,11 @@ public class BuyGames1{
 		
 		 
 		 public void Siódemki() throws InterruptedException, FindFailed {
+			Thread.sleep(5000);
+			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			 Thread.sleep(5000);
+			 Thread.sleep(15000);
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s3 = new Screen();
@@ -1235,50 +1254,60 @@ public class BuyGames1{
 			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\Siodemki-increase.png").similar(0.6);
 			  s3.wait(increase3 ,1000);
 			  s3.click(increase3);
-			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Siodemki-demobutton.png").similar(0.6);
-			  s3.wait(t3,1000);
-			  s3.click(t3);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\Siodemki-mtm.png").similar(0.6);
+			  s3.wait(mtm,1000);
+			  s3.click(mtm);
+			  Pattern buy = new Pattern(absPath+"\\Polandlottery\\Siodemki-buy.png").similar(0.6);
+			  s3.wait(buy,1000);
+			  s3.click(buy);
 			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\Siodemki-autobtn.png").similar(0.6);
 			  s3.wait(ra3,1000);
 			  s3.doubleClick(ra3);
+			  s3.wait(buy,1000);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,1000);
-			  s3.click(home3);
+			  s3.click(home3);		
 			  js.executeScript("window.scrollBy(0,0)", "");
 			 
+			  
 		}
 		@Test
 		
-		 public void gp () throws InterruptedException, FindFailed {
-			 Thread.sleep(5000);
-			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+		public void gp () throws InterruptedException, FindFailed {
+			Thread.sleep(5000);
+			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 			 Thread.sleep(5000);
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window. scrollBy(500,500)");
+			  js.executeScript("window. scrollBy(0,200)");
 			  Screen s3 = new Screen();
 			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\Gp-frontpage.png").similar(0.6);
 			  s3.wait(frontpage,1000);
 			  s3.click(frontpage);
-		js.executeScript("window. scrollBy(0,600)");
+			  Thread.sleep(15000);
+		     js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
 			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\gp-demo.png").similar(0.6);
 			  s3.wait(demo3,1000);
 			  s3.click(demo3);
 			  Pattern audio3 = new Pattern(absPath+"\\Polandlottery\\gp-audio.png").similar(0.6);
-			  s3.wait(audio3,1000);
-			  s3.doubleClick(audio3);
+			  s3.wait(audio3,4000);
+			  s3.click(audio3);
 			  Pattern ok3 = new Pattern(absPath+"\\Polandlottery\\gp-ok.png").similar(0.6);
 			  s3.wait(ok3,1000);
 			  s3.click(ok3);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\gp-mtm.png").similar(0.6);
+			  s3.wait(mtm,1000);
+			  s3.click(mtm);
 			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\gp-increase.png").similar(0.6);
 			  s3.wait(increase3 ,1000);
 			  s3.click(increase3);
-			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\gp-demobtn.png").similar(0.6);
+			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\gp-buy.png").similar(0.6);
 			  s3.wait(t3,1000);
 			  s3.click(t3);
-			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\gp-autobtn.png").similar(0.6);
+			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\gp-buy-auto.png").similar(0.6);
 			  s3.wait(ra3,1000);
 			  s3.doubleClick(ra3);
+			  s3.wait(t3,1000);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,1000);
 			  s3.click(home3);
@@ -1286,39 +1315,45 @@ public class BuyGames1{
 			 
 		}
 		@Test
-		
-		 public void Owocki() throws InterruptedException, FindFailed {
-			 Thread.sleep(5000);
-			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+				public void Owocki() throws InterruptedException, FindFailed {
+			Thread.sleep(5000);
+			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 			 Thread.sleep(5000);
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window. scrollBy(500,500)");
+			  js.executeScript("window. scrollBy(0,465)");
 			  Screen s3 = new Screen();
 			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\Owocki-fp.png").similar(0.6);
-			  s3.wait(frontpage,10000);
+			  s3.wait(frontpage,40000);
 			  s3.click(frontpage);
-		js.executeScript("window. scrollBy(0,600)");
-			   Thread.sleep(5000);
+			  Thread.sleep(15000);
+		      js.executeScript("window. scrollBy(0,600)");
+			  Thread.sleep(5000);
 			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\Owocki-demo.png").similar(0.6);
-			  s3.wait(demo3,10000);
+			  s3.wait(demo3,40000);
 			  s3.click(demo3);
 			  Pattern audio3 = new Pattern(absPath+"\\Polandlottery\\Owocki-audio.png").similar(0.6);
-			  s3.wait(audio3,10000);
+			  s3.wait(audio3,40000);
 			  s3.doubleClick(audio3);
 			  Pattern ok3 = new Pattern(absPath+"\\Polandlottery\\Owocki-ok.png").similar(0.6);
 			  s3.wait(ok3,10000);
 			  s3.click(ok3);
 			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\Owocki-increase.png").similar(0.6);
-			  s3.wait(increase3 ,10000);
+			  s3.wait(increase3 ,40000);
 			  s3.click(increase3);
-			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Owocki-demobtn.png").similar(0.6);
-			  s3.wait(t3,10000);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\Owocki-mtm.png").similar(0.6);
+			  s3.wait(mtm,40000);
+			  s3.click(mtm);
+			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Owocki-buy.png").similar(0.6);
+			  s3.wait(t3,40000);
 			  s3.click(t3);
 			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\Owocki-autobtn.png").similar(0.6);
-			  s3.wait(ra3,10000);
+			  s3.wait(ra3,40000);
 			  s3.doubleClick(ra3);
+			  Pattern home = new Pattern(absPath+"\\Polandlottery\\PolandlotteryNewImages\\ow-end.png").similar(0.6);
+			  s3.wait(home,10000);
+			  s3.click(home);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
-			  s3.wait(home3,10000);
+			  s3.wait(home3,40000);
 			  s3.click(home3);
 			  js.executeScript("window.scrollBy(0,0)", "");
 			 
@@ -1326,15 +1361,16 @@ public class BuyGames1{
 		@Test
 		
 		 public void Gwiazdki () throws InterruptedException, FindFailed {
-			 Thread.sleep(5000);
-			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			 Thread.sleep(5000);
+			Thread.sleep(5000);
+			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+			  Thread.sleep(5000);
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("window. scrollBy(500,500)");
 			  Screen s3 = new Screen();
 			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-fp.png").similar(0.6);
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
+			  Thread.sleep(15000);
 		js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
 			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-demo.png").similar(0.6);
@@ -1349,12 +1385,16 @@ public class BuyGames1{
 			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-increase.png").similar(0.6);
 			  s3.wait(increase3 ,10000);
 			  s3.click(increase3);
-			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-demobtn.png").similar(0.6);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-mtm.png").similar(0.6);
+			  s3.wait(mtm,10000);
+			  s3.click(mtm);
+			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-buy.png").similar(0.6);
 			  s3.wait(t3,10000);
 			  s3.click(t3);
 			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-autobtn.png").similar(0.6);
 			  s3.wait(ra3,10000);
 			  s3.doubleClick(ra3);
+			  s3.click(t3);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,10000);
 			  s3.click(home3);
@@ -1364,15 +1404,17 @@ public class BuyGames1{
 		@Test
 		
 		 public void krzyowki() throws InterruptedException, FindFailed {
+			
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 			 Thread.sleep(5000);
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window. scrollBy(500,500)");
+			  js.executeScript("window. scrollBy(0,250)");
 			  Screen s3 = new Screen();
 			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\krzyowki-fp.png").similar(0.6);
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
+				 Thread.sleep(15000);
 		js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
 			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\krzyowki-demo.png").similar(0.6);
@@ -1387,12 +1429,16 @@ public class BuyGames1{
 			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\krzyowki-increase.png").similar(0.6);
 			  s3.wait(increase3 ,10000);
 			  s3.click(increase3);
-			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\krzyowki-demobtn.png").similar(0.6);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\krzyowki-mtm.png").similar(0.6);
+			  s3.wait(mtm,10000);
+			  s3.click(mtm);
+			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\krzyowki-buy.png").similar(0.6);
 			  s3.wait(t3,10000);
 			  s3.click(t3);
 			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\krzyowki-autobtn.png").similar(0.6);
 			  s3.wait(ra3,10000);
 			  s3.doubleClick(ra3);
+			  s3.click(t3);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,10000);
 			  s3.click(home3);
@@ -1402,17 +1448,19 @@ public class BuyGames1{
 		@Test
 		
 		 public void monetki () throws InterruptedException, FindFailed {
+			
 			 Thread.sleep(5000);
 			 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-			 Thread.sleep(5000);
+			 Thread.sleep(15000);
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window. scrollBy(500,500)");
+			  js.executeScript("window. scrollBy(0,300)");
 			  Screen s3 = new Screen();
 			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\monetki-fp.png").similar(0.6);
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
+			  Thread.sleep(15000);
 		js.executeScript("window. scrollBy(0,600)");
-			   Thread.sleep(5000);
+			   
 			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\monetki-demo.png").similar(0.6);
 			  s3.wait(demo3,10000);
 			  s3.click(demo3);
@@ -1425,12 +1473,16 @@ public class BuyGames1{
 			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\monetki-increase.png").similar(0.6);
 			  s3.wait(increase3 ,10000);
 			  s3.click(increase3);
-			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\monetki-demobtn.png").similar(0.6);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\monetki-mtm.png").similar(0.6);
+			  s3.wait(mtm,10000);
+			  s3.click(mtm);
+			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\monetki-buy.png").similar(0.6);
 			  s3.wait(t3,10000);
 			  s3.click(t3);
 			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\monetki-autobtn.png").similar(0.6);
 			  s3.wait(ra3,10000);
 			  s3.doubleClick(ra3);
+			  s3.click(t3);
 			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
 			  s3.wait(home3,10000);
 			  s3.click(home3);
@@ -1457,6 +1509,7 @@ public class BuyGames1{
 			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\znaczki-fp.png").similar(0.6);
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
+			  Thread.sleep(15000);
 		js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
 			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\Znaczki-demo.png").similar(0.6);

@@ -5,8 +5,9 @@
     <classes>
       <class name="PLLottery.buyexample">
         <methods>
+          <include name="afterMethod"/>
+          <include name="Owocki"/>
           <include name="beforeMethod"/>
-          <include name="ss"/>
         </methods>
       </class> <!-- PLLottery.buyexample -->
     </classes>

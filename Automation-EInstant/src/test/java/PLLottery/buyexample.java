@@ -15,6 +15,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 
 public class buyexample{
@@ -43,7 +44,7 @@ public class buyexample{
 			driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[3]/div[1]/div/div[2]/div[1]/button/div[2]/span")).click();
 			Thread.sleep(1000);
 			//entering uid
-			driver.findElement(By.xpath("//*[@id=\"username-dropdown-login\"]")).sendKeys("Mrosin80");
+			driver.findElement(By.xpath("//*[@id=\"username-dropdown-login\"]")).sendKeys("Mrosin50");
 			//entering password
 			driver.findElement(By.xpath("//*[@id=\"password-dropdown-login\"]")).sendKeys("Welcome1");
 			System.out.println("login button");
@@ -60,43 +61,56 @@ public class buyexample{
 				}
 		}
 	 @Test
-	 public void ss() throws InterruptedException, FindFailed {
-		 driver.findElement(By.xpath("//*[@id=\\\"__layout\\\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
-		 Thread.sleep(5000);
-		 driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/a[2]")).click();
-		 Thread.sleep(15000);
-		 Screen s = new Screen();
-		 JavascriptExecutor js = (JavascriptExecutor) driver;
-		 js.executeScript("window.scrollBy(0,550)", "");
-		Pattern demo = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Demo.png").similar(0.7);
-		s.wait(demo,40000);
-		s.click(demo);
-		Pattern FP = new Pattern(absPath+"\\Smocze Skarby\\FP.png").similar(0.7);
-		s.wait(FP,40000);
-		s.click(FP);
-		/*
-		Pattern audio = new Pattern(absPath+"\\PolandGames\\Grzmiąca Fortuna\\GF-Audio.png").similar(0.7);
-		s.wait(audio,40000);
-		s.click(audio);
-		Pattern demobtn = new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\demobtn.png").similar(0.5);
-		s.wait(demobtn,40000);
-		s.click(demobtn);
-		*/
-		Thread.sleep(2000);
-		Pattern settings= new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\setting.png").similar(0.5);
-		s.wait(settings,40000);
-		s.click(settings);
-		Thread.sleep(1000);
-		Pattern mtm= new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\mtm.png").similar(0.5);
-		s.wait(mtm,40000);
-		s.click(mtm);
-		Thread.sleep(2000);
-		Pattern buy= new Pattern(absPath+"\\PolandGames\\Smocze Skarby\\place.png").similar(0.5);
-		s.wait(buy,40000);
-		s.click(buy);
-		s.wait(buy,40000);
-		s.click(absPath+"\\PolandGames\\home.png");
-		Thread.sleep(4000);
-		js.executeScript("window.scrollBy(1000,0)");	
-		 }
+	
+		
+	 public void Gwiazdki () throws InterruptedException, FindFailed {
+			Thread.sleep(5000);
+			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
+			  Thread.sleep(5000);
+			 JavascriptExecutor js = (JavascriptExecutor) driver;
+			  js.executeScript("window. scrollBy(0,450)");
+			  Screen s3 = new Screen();
+			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-fp.png").similar(0.6);
+			  s3.wait(frontpage,10000);
+			  s3.click(frontpage);
+			  Thread.sleep(15000);
+		js.executeScript("window. scrollBy(0,600)");
+			   Thread.sleep(5000);
+			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-demo.png").similar(0.6);
+			  s3.wait(demo3,10000);
+			  s3.click(demo3);
+			  Pattern audio3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-audio.png").similar(0.6);
+			  s3.wait(audio3,10000);
+			  s3.doubleClick(audio3);
+			  Pattern ok3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-ok.png").similar(0.6);
+			  s3.wait(ok3,10000);
+			  s3.click(ok3);
+			  Pattern increase3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-increase.png").similar(0.6);
+			  s3.wait(increase3 ,10000);
+			  s3.click(increase3);
+			  Pattern mtm = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-mtm.png").similar(0.6);
+			  s3.wait(mtm,10000);
+			  s3.click(mtm);
+			  Pattern t3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-buy.png").similar(0.6);
+			  s3.wait(t3,10000);
+			  s3.click(t3);
+			  Pattern ra3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-autobtn.png").similar(0.6);
+			  s3.wait(ra3,10000);
+			  s3.doubleClick(ra3);
+			  s3.click(t3);
+			  Pattern home = new Pattern(absPath+"\\Polandlottery\\PolandlotteryNewImages\\ow-end.png").similar(0.6);
+			  s3.wait(home,10000);
+			  s3.click(home);
+			  Pattern home3 = new Pattern(absPath+"\\Polandlottery\\Tot-try-home.png").similar(0.6);
+			  s3.wait(home3,10000);
+			  s3.click(home3);
+			  js.executeScript("window.scrollBy(0,0)", "");
+			 
+		}
+	 @AfterMethod
+	  public void afterMethod() {
+		  driver.close();
+	  }
+	 
+	 
 }
