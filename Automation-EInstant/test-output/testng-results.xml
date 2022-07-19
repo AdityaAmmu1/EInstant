@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+=======
+<testng-results ignored="27" total="28" passed="1" failed="0" skipped="0">
+>>>>>>> refs/remotes/origin/master
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2022-07-18T18:10:33 IST" name="Default suite" finished-at="2022-07-18T18:15:37 IST" duration-ms="304276">
+=======
+  <suite started-at="2022-07-19T11:16:37 IST" name="Default suite" finished-at="2022-07-19T11:20:39 IST" duration-ms="242009">
+>>>>>>> refs/remotes/origin/master
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2022-07-18T18:10:33 IST" name="Default test" finished-at="2022-07-18T18:15:37 IST" duration-ms="304276">
       <class name="PLLottery.buyexample">
         <test-method is-config="true" signature="beforeMethod()[pri:0, instance:PLLottery.buyexample@d9345cd]" started-at="2022-07-18T18:10:33 IST" name="beforeMethod" finished-at="2022-07-18T18:15:37 IST" duration-ms="304151" status="FAIL">
@@ -66,8 +75,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
+=======
+    <test started-at="2022-07-19T11:16:37 IST" name="Default test" finished-at="2022-07-19T11:20:39 IST" duration-ms="242009">
+      <class name="PLLottery.DemoGames1">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:PLLottery.DemoGames1@4ec4f3a0]" started-at="2022-07-19T11:16:37 IST" name="beforeMethod" finished-at="2022-07-19T11:18:07 IST" duration-ms="90336" status="PASS">
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="gp()[pri:0, instance:PLLottery.DemoGames1@4ec4f3a0]" started-at="2022-07-19T11:18:07 IST" name="gp" finished-at="2022-07-19T11:20:34 IST" duration-ms="147417" status="PASS">
+>>>>>>> refs/remotes/origin/master
+          <reporter-output>
+          </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- beforeMethod -->
         <test-method signature="Owocki()[pri:0, instance:PLLottery.buyexample@d9345cd]" started-at="2022-07-18T18:15:37 IST" name="Owocki" finished-at="2022-07-18T18:15:37 IST" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.TimeoutException">
@@ -136,6 +155,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- PLLottery.buyexample -->
+=======
+        </test-method> <!-- gp -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:PLLottery.DemoGames1@4ec4f3a0]" started-at="2022-07-19T11:20:34 IST" name="afterMethod" finished-at="2022-07-19T11:20:39 IST" duration-ms="4202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- PLLottery.DemoGames1 -->
+>>>>>>> refs/remotes/origin/master
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
