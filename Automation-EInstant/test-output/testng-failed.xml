@@ -3,20 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PLLottery.DemoGames1">
+      <class name="LNB.LNBBuygames">
         <methods>
-<<<<<<< HEAD
-          <include name="afterMethod"/>
-=======
->>>>>>> refs/remotes/origin/master
-          <include name="Owocki"/>
-          <include name="beforeMethod"/>
-<<<<<<< HEAD
-=======
-          <include name="afterMethod"/>
->>>>>>> refs/remotes/origin/master
+          <include name="DisarmTheAlarm"/>
+          <include name="aftertest"/>
+          <include name="beforetest"/>
+          <include name="WheelOfTheFortune"/>
         </methods>
-      </class> <!-- PLLottery.DemoGames1 -->
+      </class> <!-- LNB.LNBBuygames -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

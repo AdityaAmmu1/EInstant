@@ -3,6 +3,9 @@ package PLLottery;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.BeforeTest;
+
+import java.awt.geom.Point2D;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,6 +16,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.sikuli.script.FindFailed;
+import org.sikuli.script.Finder;
+import org.sikuli.script.Match;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 import org.testng.annotations.AfterMethod;
@@ -60,6 +65,18 @@ public class buyexample{
 				s2.click(zamknij);
 				}
 		}
+	/* public Point2D getCoords(BufferedImage baseImg, String targetImgPath) {
+		  Match m;
+		  Finder f = new Finder(baseImg);
+		  Point2D coords = new Point2D.Double(-1, -1);
+		  f.find(targetImgPath);
+		  if (f.hasNext()) {
+		    m = f.next();
+		    coords.setLocation(m.getTarget().getX(), m.getTarget().getY());
+		  }
+		  return coords;
+		}
+		*/
 	 @Test
 	
 		
@@ -67,14 +84,15 @@ public class buyexample{
 			Thread.sleep(5000);
 			  driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[1]/header/div[2]/div/div[2]/div[2]/div/div[2]/button/span[1]")).click();
 			  Thread.sleep(5000);
-			 JavascriptExecutor js = (JavascriptExecutor) driver;
-			  js.executeScript("window. scrollBy(0,450)");
 			  Screen s3 = new Screen();
+			 JavascriptExecutor js = (JavascriptExecutor) driver;
+			  js.executeScript("window.scrollBy(0,450)");
 			  Pattern frontpage = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-fp.png").similar(0.6);
 			  s3.wait(frontpage,10000);
 			  s3.click(frontpage);
+			  System.out.println("Gwiazdki is launched");
 			  Thread.sleep(15000);
-		js.executeScript("window. scrollBy(0,600)");
+		      js.executeScript("window. scrollBy(0,600)");
 			   Thread.sleep(5000);
 			  Pattern demo3 = new Pattern(absPath+"\\Polandlottery\\Gwiazdki-demo.png").similar(0.6);
 			  s3.wait(demo3,10000);
