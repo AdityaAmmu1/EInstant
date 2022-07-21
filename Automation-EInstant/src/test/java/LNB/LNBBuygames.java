@@ -86,7 +86,7 @@ public class LNBBuygames {
 	  s.wait(buy,40000);
 	   
   }*/
-	@Test
+	/*@Test
 	  public void DisarmTheAlarm() throws FindFailed, InterruptedException  {
 		  driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2103-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=uniqueID_300-2103-001_BUY");
 		  Screen s = new Screen();
@@ -102,39 +102,42 @@ public class LNBBuygames {
 		  s.wait(back,40000);
 		   
 	  }
-	
+	*/
 	@Test
 	  public void RainbowLoot() throws FindFailed, InterruptedException  {
 		  driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2104-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=uniqueID_300-2104-001_BUY");
+		  Thread.sleep(5000);
 		  Screen s = new Screen();
-		  Pattern ok = new Pattern(absPath+"\\LNB\\Rainbow\\ok.png").similar(0.4);
+		  Pattern ok = new Pattern(absPath+"\\LNB\\Rainbow\\ok.png").similar(0.6);
 		  s.wait(ok,40000);
 		  s.click(ok);
-		  Pattern inc = new Pattern(absPath+"\\LNB\\Rainbow\\increase.png").similar(0.4);
+		  Pattern inc = new Pattern(absPath+"\\LNB\\Rainbow\\increase.png").similar(0.6);
 		  s.wait(inc,40000);
 		  s.click(inc);
-		  Pattern buy = new Pattern(absPath+"\\LNB\\Rainbow\\Acheter.png").similar(0.4);
+		  Pattern buy = new Pattern(absPath+"\\LNB\\Rainbow\\Acheter.png").similar(0.5);
 		  s.wait(buy,40000);
 		  s.click(buy);
 		  Pattern autoplay = new Pattern(absPath+"\\LNB\\Rainbow\\AutoPlay.png").similar(0.4);
 		  s.wait(autoplay,40000);
 		  s.click(autoplay);
-		 //Thread.sleep(2000);
+		  Pattern ok1 = new Pattern(absPath+"\\LNB\\Rainbow\\ok-close.png").similar(0.6);
+		  s.wait(ok1,40000);
+		  s.click(ok1);
 		 s.wait(buy,40000);
 		  //Pattern back = new Pattern(absPath+"\\LNB\\DisarmTheAlarm\\back.png");
 		  //s.wait(back,40000);
 		 	  }
-	@Test
+	@Test//need to run again
 	  public void WheelOfTheFortune() throws FindFailed, InterruptedException  {
 		  driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2110-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=uniqueID_300-2110-001_BUY");
 		  Screen s = new Screen();
-		  Pattern ok = new Pattern(absPath+"\\LNB\\WheelOfTheFortune\\Ok.png").similar(0.4);
+		  Pattern ok = new Pattern(absPath+"\\LNB\\WheelOfTheFortune\\Ok.png").similar(0.5);
 		  s.wait(ok,40000);
 		  s.click(ok);
-		  Pattern inc = new Pattern(absPath+"\\LNB\\WheelOfTheFortune\\increase.png").similar(0.4);
+		  Pattern inc = new Pattern(absPath+"\\LNB\\WheelOfTheFortune\\increase.png").similar(0.6);
 		  s.wait(inc,40000);
 		  s.click(inc);
-		  Pattern buy = new Pattern(absPath+"\\LNB\\WheelOfTheFortune\\Buy.png").similar(0.4);
+		  Pattern buy = new Pattern(absPath+"\\LNB\\WheelOfTheFortune\\Buy.png").similar(0.5);
 		  s.wait(buy,40000);
 		  s.click(buy);
 		  Pattern start = new Pattern(absPath+"\\LNB\\WheelOfTheFortune\\Start.png").similar(0.4);
@@ -152,6 +155,50 @@ public class LNBBuygames {
 		 Pattern playagain = new Pattern(absPath+"\\LNB\\WheelOfTheFortune\\Playagain.png");
 		 s.wait(playagain,60000);
 		 	  }
+	@Test//not working
+	public void TikiTacToe() throws FindFailed, InterruptedException
+	{
+		driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2142-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=kamatchi_300-2142-001_BUY");
+		//Thread.sleep(10000);  
+		Screen s = new Screen();
+		Thread.sleep(10000);
+		 // Pattern inc = new Pattern(absPath+"\\LNB\\TikiTacToe\\increase.png").similar(0.6);
+		 // s.wait(inc,40000);
+		 // s.click(inc);
+		 // Pattern dec = new Pattern(absPath+"\\LNB\\TikiTacToe\\decrease.png");
+		 // s.wait(dec,40000);
+		 // s.click(dec);		  
+		  Pattern buy = new Pattern(absPath+"\\LNB\\TikiTacToe\\Acheter.png").similar(0.5);
+		  s.wait(buy,40000);
+		  s.click(buy);
+		  Pattern autoplay = new Pattern(absPath+"\\LNB\\TikiTacToe\\Jouer.png").similar(0.7);
+		  s.wait(autoplay,40000);
+		  s.click(autoplay);
+		  s.click(buy);
+	}
+	@Test
+	public void juciyloot() throws FindFailed, InterruptedException
+	{
+		driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2152-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=kamatchi_300-2152-001_BUY");
+		//Thread.sleep(10000);  
+		Screen s = new Screen();
+		Thread.sleep(10000);
+		 // Pattern inc = new Pattern(absPath+"\\LNB\\TikiTacToe\\increase.png").similar(0.6);
+		 // s.wait(inc,40000);
+		 // s.click(inc);
+		 // Pattern dec = new Pattern(absPath+"\\LNB\\TikiTacToe\\decrease.png");
+		 // s.wait(dec,40000);
+		 // s.click(dec);		  
+		  Pattern buy = new Pattern(absPath+"\\LNB\\TikiTacToe\\Acheter.png").similar(0.5);
+		  s.wait(buy,40000);
+		  s.click(buy);
+		  Pattern autoplay = new Pattern(absPath+"\\LNB\\TikiTacToe\\Jouer.png").similar(0.7);
+		  s.wait(autoplay,40000);
+		  s.click(autoplay);
+		  s.click(buy);
+	}
+	
+
 	
 	
   
