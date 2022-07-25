@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LNB.LNBBuygames">
+      <class name="MockNativeSystem.Recon">
         <methods>
+<<<<<<< HEAD
           <include name="fivecardpoker"/>
           <include name="aftertest"/>
           <include name="beforetest"/>
+=======
+          <include name="recon"/>
+          <include name="BeforeTest"/>
+>>>>>>> branch 'master' of https://github.com/AdityaAmmu1/EInstant.git
         </methods>
-      </class> <!-- LNB.LNBBuygames -->
+      </class> <!-- MockNativeSystem.Recon -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -7,6 +7,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -29,8 +30,8 @@ public class Recon {
 	static String absPath = file.getAbsolutePath();
   @BeforeTest
   public void BeforeTest() throws InterruptedException {
-	  	WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+	  	WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 		driver.get("http://mns-ps02.lab.wagerworks.com:8080/MNS2/login.html");
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//*[@id=\"userName\"]")).sendKeys("aditest1");
@@ -73,13 +74,7 @@ public class Recon {
 
 	
 @Test
-	public static void recon() throws InterruptedException, FindFailed, AWTException {
-	
-	WebDriverManager.chromedriver().setup();
-	ChromeOptions Options = new ChromeOptions();
-	Options.setExperimentalOption( "excludeSwitches" , new String[] {"automation"});
-	driver = new ChromeDriver(Options);
-	driver.manage().window().maximize();
+	public void recon() throws InterruptedException, FindFailed, AWTException {
 	driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/div/section[2]/div/div/div/div[1]/div/div[2]/div/div/input")).sendKeys("ruby");
 	  Thread.sleep(5000);
 	  driver.findElement(By.xpath("//*[@id=\"skb-gamelist-wrapper\"]/div[1]/table/tbody/tr/td[4]/table/tbody/tr[3]/td[2]/a[2]")).click();
@@ -110,11 +105,11 @@ public class Recon {
 	Pattern AutoReveal2 = new Pattern(absPath+"\\MNS\\ruby\\AutoReveal2.png");
 	screen.wait(AutoReveal2,20000);
 	screen.click(AutoReveal2);
-	Thread.sleep(2000);
 	
-	//driver.close();
-	//Thread.sleep(3000);
+	Thread.sleep(5000);
+	
 	driver.switchTo().window(parentID); //switching back to Parent window
+	Thread.sleep(5000);
 	driver.navigate().refresh();
 	Thread.sleep(2000);
 	Robot robot = new Robot();
@@ -129,14 +124,14 @@ public class Recon {
   //Switch focus to new tab
   Thread.sleep(4000);
   ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-  driver.switchTo().window(tabs.get(1));
+  driver.switchTo().window(tabs.get(2));
   
   Thread.sleep(2000);
-    driver.get("https://rgs-cust03-admin.lab.wagerworks.com/ng/#/newlogin");
+	driver.get("https://rgs-cust03-admin.lab.wagerworks.com/ng/#/newlogin");
 	driver.findElement(By.xpath("//*[@id=\"uname1\"]")).sendKeys("Santhis");
 	driver.findElement(By.xpath("//*[@id=\"pwd1\"]")).sendKeys("Test123$");
 	driver.findElement(By.xpath("//*[@id=\"btnLogin\"]/span")).click();
-	Thread.sleep(5000);
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	//Recon
 	driver.findElement(By.xpath("//*[@id=\"sideMenuList\"]/div/div[6]/div[1]/a")).click();//operators
 	Thread.sleep(2000);
@@ -150,8 +145,8 @@ public class Recon {
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("//*[@id=\"ui-tabpanel-9\"]/div/endpoint-intmodes-page/div/div[2]/p-table/div/div[1]/table/tbody/tr[3]/td[1]")).click();//mns-xt 
 	Thread.sleep(2000);
-	//driver.findElement(By.xpath("//*[@id=\"outcomeData\"]/div[2]/div/div[4]/div[2]/input")).sendKeys("a");//host name
-	//Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id=\"outcomeData\"]/div[2]/div/div[4]/div[2]/input")).sendKeys("a");//host name
+	Thread.sleep(2000);
 	driver.findElement(By.xpath("//*[@id=\"outcomeData\"]/div[4]/div/div[3]/div[4]/div[3]/a")).click();//validate and heart beat
 	Thread.sleep(5000);
 	driver.findElement(By.xpath("//*[@id=\"ui-tabpanel-9\"]/div/endpoint-intmodes-page/edit-endpoint/div/p-dialog/div/div[3]/p-footer/button[1]/span")).click();//save endpoint
@@ -160,6 +155,52 @@ public class Recon {
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("/html/body/app-root/app-home-page/div/ul/li[2]/div[1]/div/div/p-menu/div/ul/li[4]/a/span")).click();//clear cache
 	Thread.sleep(2000);
+	driver.findElement(By.xpath("/html/body/app-root/app-home-page/p-dialog[2]/div/div[3]/p-footer/button/span")).click(); //click cancel on the popup-page of the chache
+	Thread.sleep(1000);
+	driver.switchTo().window(tabs.get(1));
+	Pattern revealAll = new Pattern(absPath+"\\MNS\\ruby\\revealAll3.png").similar(0.7);
+   	screen.wait(revealAll,20000);
+   	screen.click(revealAll);
+   	Thread.sleep(15000);
+   	driver.close();
+   	driver.switchTo().window(tabs.get(2));
+   	driver.findElement(By.xpath("//*[@id=\"ui-tabpanel-9\"]/div/endpoint-intmodes-page/div/div[2]/p-table/div/div[1]/table/tbody/tr[3]/td[1]")).click();//mns-xt 
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id=\"outcomeData\"]/div[2]/div/div[4]/div[2]/input")).sendKeys(Keys.BACK_SPACE);//host name
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id=\"outcomeData\"]/div[4]/div/div[3]/div[4]/div[3]/a")).click();//validate and heart beat
+	Thread.sleep(5000);
+	driver.findElement(By.xpath("//*[@id=\"ui-tabpanel-9\"]/div/endpoint-intmodes-page/edit-endpoint/div/p-dialog/div/div[3]/p-footer/button[1]/span")).click();//save endpoint
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id=\"logout-menu\"]")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("/html/body/app-root/app-home-page/div/ul/li[2]/div[1]/div/div/p-menu/div/ul/li[4]/a/span")).click();//clear cache
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("/html/body/app-root/app-home-page/p-dialog[2]/div/div[3]/p-footer/button/span")).click(); //click cancel on the popup-page of the chache
+	Thread.sleep(1000);
+	
+	//Navigate to Reconcile screen 
+	driver.findElement(By.xpath("//*[@id=\"sideMenuList\"]/div/div[5]/div[1]/a")).click(); //click on the Reconsile button on rgs-custo3 homescreen
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//*[@id=\"XTTransactions\"]")).click(); //select the xt transactions
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[4]/search-condition-operator-section/div[1]/div[1]/p-dropdown/div/div[3]/span")).click();//select operator
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[4]/search-condition-operator-section/div[1]/div[1]/p-dropdown/div/div[4]/div[1]/input")).sendKeys("Georgia Lottery"+Keys.ARROW_DOWN+Keys.ENTER); //select the ge lottery option
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[4]/search-condition-operator-section/div[1]/div[2]/p-dropdown/div/div[3]/span")).click(); //Select the skin button
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[4]/search-condition-operator-section/div[1]/div[2]/p-dropdown/div/div[4]/div[1]/input")).sendKeys("GA SIT2"+Keys.ARROW_DOWN+Keys.ENTER); //select hte correct option in the skin code button
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//*[@id=\"ui-panel-2-content\"]/div/div[5]/button[2]/span")).click(); //select the view xt transactions
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("#showResultDiv > div.pagination-table-div > div > p-table > div > div.ui-table-scrollable-wrapper.ng-star-inserted > div > div.ui-table-scrollable-body > table > tbody > tr > td:nth-child(4) > label")).click();
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//*[@id=\"showResultDiv\"]/div[1]/div[1]/app-reconcile-action/div/input[1]")).sendKeys("Recon");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id=\"showResultDiv\"]/div[1]/div[1]/app-reconcile-action/div/div/button/span")).click();
+	Thread.sleep(3000);
+	driver.close();
 	
 	}
 
