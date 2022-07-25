@@ -340,8 +340,7 @@ public class LNBBuygames {
 			  s.click(autoplay1);
 			  s.wait(buy,400000);
 		}
-		  @Test
-		  
+		  @Test		  
 			public void fivecardpoker () throws FindFailed, InterruptedException
 			{
 		  
