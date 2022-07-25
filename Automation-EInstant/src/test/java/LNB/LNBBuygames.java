@@ -45,7 +45,7 @@ public class LNBBuygames {
 			driver.manage().window().maximize();
 		
 		}
-	 /*@Test
+	 @Test
 	  public void DerbyRun() throws FindFailed  {
 		  driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2068-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=uniqueID_300-2068-001_BUY");
 		  Screen s = new Screen();
@@ -95,8 +95,8 @@ public class LNBBuygames {
 	  s.click(autoplay);
 	  s.wait(buy,40000);
 	   
-  }*/
-	/*@Test
+  }
+	@Test
 	  public void DisarmTheAlarm() throws FindFailed, InterruptedException  {
 		  driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2103-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=uniqueID_300-2103-001_BUY");
 		  Screen s = new Screen();
@@ -112,7 +112,7 @@ public class LNBBuygames {
 		  s.wait(back,40000);
 		   
 	  }
-	*/
+
 	@Test
 	  public void RainbowLoot() throws FindFailed, InterruptedException  {
 		  driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2104-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=uniqueID_300-2104-001_BUY");
