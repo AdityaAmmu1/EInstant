@@ -5,10 +5,9 @@
     <classes>
       <class name="LNB.LNBBuygames">
         <methods>
-          <include name="DisarmTheAlarm"/>
+          <include name="fivecardpoker"/>
           <include name="aftertest"/>
           <include name="beforetest"/>
-          <include name="WheelOfTheFortune"/>
         </methods>
       </class> <!-- LNB.LNBBuygames -->
     </classes>

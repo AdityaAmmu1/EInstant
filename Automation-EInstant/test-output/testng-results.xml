@@ -1,21 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="9" total="10" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-21T19:28:18 IST" name="Default suite" finished-at="2022-07-21T19:29:12 IST" duration-ms="54295">
+  <suite started-at="2022-07-25T10:10:03 IST" name="Default suite" finished-at="2022-07-25T10:10:56 IST" duration-ms="53101">
     <groups>
     </groups>
-    <test started-at="2022-07-21T19:28:18 IST" name="Default test" finished-at="2022-07-21T19:29:12 IST" duration-ms="54295">
+    <test started-at="2022-07-25T10:10:03 IST" name="Default test" finished-at="2022-07-25T10:10:56 IST" duration-ms="53101">
       <class name="LNB.LNBBuygames">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:LNB.LNBBuygames@b9b00e0]" started-at="2022-07-21T19:28:18 IST" name="beforetest" finished-at="2022-07-21T19:28:21 IST" duration-ms="3391" status="PASS">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:LNB.LNBBuygames@272113c4]" started-at="2022-07-25T10:10:03 IST" name="beforetest" finished-at="2022-07-25T10:10:05 IST" duration-ms="2292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="RainbowLoot()[pri:0, instance:LNB.LNBBuygames@b9b00e0]" started-at="2022-07-21T19:28:21 IST" name="RainbowLoot" finished-at="2022-07-21T19:29:12 IST" duration-ms="50412" status="PASS">
+        <test-method signature="fivecardpoker()[pri:0, instance:LNB.LNBBuygames@272113c4]" started-at="2022-07-25T10:10:05 IST" name="fivecardpoker" finished-at="2022-07-25T10:10:56 IST" duration-ms="50469" status="FAIL">
+          <exception class="org.sikuli.script.FindFailed">
+            <message>
+              <![CDATA[C:\Users\kbf27681\git\EInstant\Automation-EInstant\Rgsimages\LNB\5cardpoker\Buy.png: (180x64) seen at (1253, 80) with 0.59 in R[0,0 1536x864]@S(0)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[FindFailed: C:\Users\kbf27681\git\EInstant\Automation-EInstant\Rgsimages\LNB\5cardpoker\Buy.png: (180x64) seen at (1253, 80) with 0.59 in R[0,0 1536x864]@S(0)
+  Line 2226, in file Region.java
+
+at org.sikuli.script.Region.wait(Region.java:2226)
+at org.sikuli.script.Region.wait(Region.java:2244)
+at org.sikuli.script.Region.getLocationFromTarget(Region.java:3298)
+at org.sikuli.script.Region.click(Region.java:3916)
+at org.sikuli.script.Region.click(Region.java:3892)
+at LNB.LNBBuygames.fivecardpoker(LNBBuygames.java:357)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.sikuli.script.FindFailed -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RainbowLoot -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:LNB.LNBBuygames@b9b00e0]" started-at="2022-07-21T19:29:12 IST" name="aftertest" finished-at="2022-07-21T19:29:12 IST" duration-ms="431" status="PASS">
+        </test-method> <!-- fivecardpoker -->
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:LNB.LNBBuygames@272113c4]" started-at="2022-07-25T10:10:56 IST" name="aftertest" finished-at="2022-07-25T10:10:56 IST" duration-ms="292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->
