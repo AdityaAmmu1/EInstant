@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LNB.LNBBuygames">
+      <class name="MockNativeSystem.Recon">
         <methods>
-          <include name="DisarmTheAlarm"/>
-          <include name="aftertest"/>
-          <include name="beforetest"/>
-          <include name="WheelOfTheFortune"/>
+          <include name="recon"/>
+          <include name="BeforeTest"/>
         </methods>
-      </class> <!-- LNB.LNBBuygames -->
+      </class> <!-- MockNativeSystem.Recon -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
