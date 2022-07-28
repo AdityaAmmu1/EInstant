@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
@@ -24,6 +25,7 @@ public class LNBBuygames {
 	static String absPath = file.getAbsolutePath();
 	@BeforeTest
 	public void beforetest() {
+	
 		/*WebDriverManager.edgedriver().setup();
 		  EdgeOptions edgeOptions = new EdgeOptions();
 		  String addproxy1 = "http://pac.hybrid-web.global.blackspider.com/proxy.pac?p=k293mrvrbh";
@@ -35,6 +37,9 @@ public class LNBBuygames {
 		  driver.manage().window().maximize();
 		  */
 		 WebDriverManager.chromedriver().setup();
+			DesiredCapabilities caps = new DesiredCapabilities();
+			  caps.setCapability("resolution", "1680x1050");
+			  System.out.println("Resolution is set");
 			ChromeOptions chromeOptions = new ChromeOptions();
 			String addproxy = "http://pac.hybrid-web.global.blackspider.com/proxy.pac?p=k293mrvrbh";
 			Proxy proxy = new Proxy();
@@ -42,7 +47,7 @@ public class LNBBuygames {
 			proxy.setSslProxy(addproxy);//secure socket layer
 			chromeOptions.setCapability("proxy", proxy);
 			driver = new ChromeDriver(chromeOptions);
-			driver.manage().window().maximize();
+			//driver.manage().window().maximize();
 		
 		}
 	 @Test
@@ -90,7 +95,7 @@ public class LNBBuygames {
 	  Pattern buy = new Pattern(absPath+"\\LNB\\PixiesOfTheForest\\Acheter.png").similar(0.4);
 	  s.wait(buy,40000);
 	  s.click(buy);
-	  Pattern autoplay = new Pattern(absPath+"\\LNB\\PixiesOfTheForest\\AutoPlay.png");
+	  Pattern autoplay = new Pattern(absPath+"\\LNB\\PixiesOfTheForest\\AutoPlay.png").similar(0.4);
 	  s.wait(autoplay,40000);
 	  s.click(autoplay);
 	  s.wait(buy,40000);
