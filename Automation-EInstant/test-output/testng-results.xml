@@ -1,66 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="13" total="14" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-29T10:56:13 IST" name="Default suite" finished-at="2022-07-29T10:57:02 IST" duration-ms="49193">
+  <suite started-at="2022-07-29T16:42:16 IST" name="Default suite" finished-at="2022-07-29T16:43:15 IST" duration-ms="59391">
     <groups>
     </groups>
-    <test started-at="2022-07-29T10:56:13 IST" name="Default test" finished-at="2022-07-29T10:57:02 IST" duration-ms="49193">
-      <class name="Kentuckylottery.Kylottery">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:Kentuckylottery.Kylottery@4efac082]" started-at="2022-07-29T10:56:13 IST" name="beforetest" finished-at="2022-07-29T10:56:15 IST" duration-ms="2271" status="PASS">
+    <test started-at="2022-07-29T16:42:16 IST" name="Default test" finished-at="2022-07-29T16:43:15 IST" duration-ms="59391">
+      <class name="LNB.LNBBuygames">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:LNB.LNBBuygames@242b836]" started-at="2022-07-29T16:42:16 IST" name="beforetest" finished-at="2022-07-29T16:42:18 IST" duration-ms="2633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="Ruby7()[pri:0, instance:Kentuckylottery.Kylottery@4efac082]" started-at="2022-07-29T10:56:15 IST" name="Ruby7" finished-at="2022-07-29T10:57:02 IST" duration-ms="46875" status="FAIL">
-          <exception class="org.sikuli.script.FindFailed">
-            <message>
-              <![CDATA[C:\Users\kbf27681\git\EInstant\Automation-EInstant\Rgsimages\KYlottery\Ruby7\audio.png: (97x101) seen at (1311, 686) with 0.71 in R[0,0 1536x864]@S(0)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[FindFailed: C:\Users\kbf27681\git\EInstant\Automation-EInstant\Rgsimages\KYlottery\Ruby7\audio.png: (97x101) seen at (1311, 686) with 0.71 in R[0,0 1536x864]@S(0)
-  Line 2226, in file Region.java
-
-at org.sikuli.script.Region.wait(Region.java:2226)
-at org.sikuli.script.Region.wait(Region.java:2244)
-at org.sikuli.script.Region.getLocationFromTarget(Region.java:3298)
-at org.sikuli.script.Region.click(Region.java:3916)
-at org.sikuli.script.Region.click(Region.java:3892)
-at Kentuckylottery.Kylottery.Ruby7(Kylottery.java:63)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.sikuli.script.FindFailed -->
+        <test-method signature="Cleopatra()[pri:0, instance:LNB.LNBBuygames@242b836]" started-at="2022-07-29T16:42:18 IST" name="Cleopatra" finished-at="2022-07-29T16:43:15 IST" duration-ms="56387" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Ruby7 -->
-      </class> <!-- Kentuckylottery.Kylottery -->
+        </test-method> <!-- Cleopatra -->
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:LNB.LNBBuygames@242b836]" started-at="2022-07-29T16:43:15 IST" name="aftertest" finished-at="2022-07-29T16:43:15 IST" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertest -->
+      </class> <!-- LNB.LNBBuygames -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
