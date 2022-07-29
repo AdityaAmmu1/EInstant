@@ -3,18 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MockNativeSystem.Recon">
+      <class name="Kentuckylottery.Kylottery">
         <methods>
-<<<<<<< HEAD
-          <include name="fivecardpoker"/>
-          <include name="aftertest"/>
           <include name="beforetest"/>
-=======
-          <include name="recon"/>
-          <include name="BeforeTest"/>
->>>>>>> branch 'master' of https://github.com/AdityaAmmu1/EInstant.git
+          <include name="Multiplythecash"/>
         </methods>
-      </class> <!-- MockNativeSystem.Recon -->
+      </class> <!-- Kentuckylottery.Kylottery -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
