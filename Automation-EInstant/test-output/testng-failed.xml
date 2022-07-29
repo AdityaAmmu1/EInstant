@@ -5,8 +5,8 @@
     <classes>
       <class name="Kentuckylottery.Kylottery">
         <methods>
+          <include name="Ruby7"/>
           <include name="beforetest"/>
-          <include name="Multiplythecash"/>
         </methods>
       </class> <!-- Kentuckylottery.Kylottery -->
     </classes>
