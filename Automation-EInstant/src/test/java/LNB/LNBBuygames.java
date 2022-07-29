@@ -47,7 +47,7 @@ public class LNBBuygames {
 			proxy.setSslProxy(addproxy);//secure socket layer
 			chromeOptions.setCapability("proxy", proxy);
 			driver = new ChromeDriver(chromeOptions);
-			//driver.manage().window().maximize();
+			driver.manage().window().maximize();
 		
 		}
 	 @Test
@@ -72,9 +72,12 @@ public class LNBBuygames {
 		  s.wait(buy,40000);
 		   	  
 	  }
-  @Test
+  
+	 
+ @Test
   public void Cleopatra() throws FindFailed  {
-	  driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2063-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=uniqueID_300-2063-001_BUY");
+	   
+	 driver.get("https://m-azsit01.lab.wagerworks.com/eInstant/index.html?nscode=LNB&countrycode=US&currencycode=EUR&securetoken=pippo&softwareid=300-2063-001&locale=fr_BE&language=fr_BE&skincode=17&presenttype=STD&wagerType=BUY&uniqueid=uniqueID_300-2063-001_BUY");
 	  Screen s = new Screen();
 	  Pattern buy = new Pattern(absPath+"\\LNB\\Cleopatra\\Acheter.png");
 	  s.wait(buy,40000);
@@ -83,6 +86,7 @@ public class LNBBuygames {
 	  s.wait(autoplay,40000);
 	  s.click(autoplay);
 	  s.wait(buy,40000);
+	  
 	   
   }
   @Test
